@@ -10,13 +10,13 @@
                 <a href="/product">Shop</a>
             </li>
 
-            <li class="sale-noti">
+            <!--<li class="sale-noti">
                 <a href="/product">Sale</a>
-            </li>
+            </li> -->
 
-            <li>
+           <!-- <li>
                 <a href="/cart">Features</a>
-            </li>
+            </li>-->
 
             <li>
                 <a href="/blog">Blog</a>
