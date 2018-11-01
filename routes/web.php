@@ -29,9 +29,8 @@ Route::get('/contact', 'PagesController@contact');
 Route::get('/product', 'PagesController@product');
 Route::get('product-detail', 'PagesController@productDetail');
 Route::get('/cart', 'PagesController@cart');
-
-
 Route::get('/services', 'PagesController@services');
+Route::get('/kitchen-garden', 'PagesController@kitchenGarden');
 
 Route::resource('posts', 'PostsController');
 Auth::routes();
