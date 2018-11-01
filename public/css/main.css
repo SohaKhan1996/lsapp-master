@@ -212,7 +212,7 @@ iframe {
     -o-animation: ball-scale infinite linear .75s;
     animation: ball-scale infinite linear .75s;
     border-radius: 100%;
-    background-color: #e65540;
+    background-color: #f85175;
 }
 
 @-webkit-keyframes ball-scale {
@@ -638,7 +638,7 @@ iframe {
 }
 
 .logo img {
-  max-height: 55px;
+  max-height: 50px;
 }
 
 
@@ -982,7 +982,7 @@ li.sale-noti > a {
 }
 
 .logo-mobile img {
-  max-height: 27px;
+  max-height: 50px;
 }
 
 /*[ btn show menu ]
@@ -1173,7 +1173,7 @@ li.sale-noti > a {
 }
 
 .logo2 img {
-  max-height: 55px;
+  max-height: 50px;
 }
 
 .fixed-header2 {

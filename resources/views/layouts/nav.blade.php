@@ -1,6 +1,6 @@
 
 <!-- Menu -->
-<div class="wrap_menu">
+<div class="wrap_menu" , style="background-color: white;">
         <nav class="menu ">
         <ul class="main_menu">
             <li>
@@ -31,6 +31,7 @@
             </li>
         </ul>   
     </nav>
+</div>
 
     
    

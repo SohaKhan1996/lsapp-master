@@ -42,7 +42,7 @@
 <!-- Styles -->
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body >
+<body class="animsition">
     @include('layouts.header')
     @yield('content')
     @include('layouts.footer')
