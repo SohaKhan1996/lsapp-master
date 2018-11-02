@@ -48,4 +48,8 @@ class PagesController extends Controller
         $title= 'Kitchen Gardening';
         return view('pages.kitchen-garden')->with('title',$title);
     }
+    public function getstarted(){
+        $title= 'Kitchen Gardening';
+        return view('pages.get-started')->with('title',$title);
+    }
 }
