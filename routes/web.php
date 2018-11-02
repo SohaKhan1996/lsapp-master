@@ -13,7 +13,7 @@
 
 
 Route::get('/admin', function () {
-    return view('pages.admin');
+    return view('admin.pages.dashboard');
    
 });
 /*
