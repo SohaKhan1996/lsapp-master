@@ -10,21 +10,13 @@
                 <a href="/product">Shop</a>
             </li>
 
-<<<<<<< HEAD
-            {{-- <li class="sale-noti">
-=======
             <!--<li class="sale-noti">
->>>>>>> f531dd2cf84e7dca06fc033039059ed2a8d53eeb
                 <a href="/product">Sale</a>
             </li> -->
 
            <!-- <li>
                 <a href="/cart">Features</a>
-<<<<<<< HEAD
-            </li> --}}
-=======
             </li>-->
->>>>>>> f531dd2cf84e7dca06fc033039059ed2a8d53eeb
 
             <li>
                 <a href="/blog">Blog</a>
