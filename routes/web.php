@@ -12,10 +12,10 @@
 */
 
 
-// Route::get('/', function () {
-//     return view('index');
+Route::get('/admin', function () {
+    return view('pages.admin');
    
-// });
+});
 /*
 Route::get('/users/{id}/{name}', function($id, $name){
     return 'This is user '.$name.' with an id of '.$id;
