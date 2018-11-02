@@ -12,8 +12,12 @@
 */
 
 
-Route::get('/admin', function () {
+Route::get('/admin-dashboard', function () {
     return view('admin.pages.dashboard');
+   
+});
+Route::get('/product-cart', function () {
+    return view('admin.pages.product-cart');
    
 });
 /*
@@ -29,6 +33,14 @@ Route::get('/contact', 'PagesController@contact');
 Route::get('/product', 'PagesController@product');
 Route::get('product-detail', 'PagesController@productDetail');
 Route::get('/cart', 'PagesController@cart');
+
+// admin
+
+Route::get('/admin', 'AdminController@admin');
+Route::get('/product-cart', 'AdminController@productCart');
+Route::get('/product-list', 'AdminController@productList');
+Route::get('/product-edit', 'AdminController@productEdit');
+Route::get('/product-detail', 'AdminController@productDetail');
 
 
 Route::get('/services', 'PagesController@services');

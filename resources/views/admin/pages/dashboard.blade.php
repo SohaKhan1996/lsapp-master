@@ -1,11 +1,6 @@
 @extends('admin.layout.app')
-    <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
 @section('content')
-    
-    
-            
+          
         <div class="section-admin container-fluid">
             <div class="row admin text-center">
                 <div class="col-md-12">

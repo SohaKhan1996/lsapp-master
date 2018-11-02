@@ -19,14 +19,15 @@
 /*----------------------------------------*/
 /*  1.  Theme default CSS
 /*----------------------------------------*/
-html, body {height: 100%; font-family: 'Play', sans-serif;font-weight:400;background:#f5f5f5;}
+html, body {height: 100%; font-family: Montserrat-Regular;
+     ;font-weight:400;background:#f5f5f5;}
 .floatleft {float:left}
 .floatright {float:right}
 .alignleft {float:left;margin-right:15px;margin-bottom: 15px}
 .alignright {float:right;margin-left:15px;margin-bottom: 15px}
 .aligncenter {display:block;margin:0 auto 15px}
 a:focus {outline:0px solid}
-img {max-width:100%;height:auto}
+img {max-width:90%;height:auto}
 .fix {overflow:hidden}
 p {margin:0 0 15px;}
 h1, h2, h3, h4, h5, h6 {
@@ -88,7 +89,7 @@ body {}
     width: 240px;
 }
 #sidebar {
-    min-width: 200px;
+    max-width: 200px;
     background: #fff;
     color: #fff;
 	position:fixed;
@@ -237,8 +238,8 @@ body {}
 	border:none;
 }
 .footer-copyright-area {
-    background: -webkit-linear-gradient(178deg, #e12503 0%, #85060c 100%);
-    background: linear-gradient(178deg, #e12503 0%, #85060c 100%);
+    background: -webkit-linear-gradient(178deg, #e1034d 0%, #e1034d 100%);
+    background: linear-gradient(178deg, #e1034d 0%, #e1034d 100%);
     padding: 20px 0px;
     text-align: center;
 }
@@ -772,7 +773,7 @@ ul.setting-panel-list li{
 }
 .menu-setting-wrap.menu-setting-wrap-bg .nav-tabs>li.active>a, .menu-setting-wrap.menu-setting-wrap-bg .nav-tabs>li.active>a:focus, .menu-setting-wrap.menu-setting-wrap-bg .nav-tabs>li.active>a:hover
  .notes-img {
-    background: #e12503;
+    background: #ec1d62;
 }
 
 
@@ -784,10 +785,10 @@ ul.setting-panel-list li{
     border: 1px solid #ececec;
     font-size: 13px;
     height: 34px;
-    color: #303030;
+    color: black;
     padding-left: 20px;
     padding-right: 40px;
-    background: rgba(255, 255, 255, 0.1);
+    background:whitesmoke;
     box-shadow: none;
     border-radius: 30px;
     width: 200px;
@@ -812,7 +813,7 @@ ul.setting-panel-list li{
     line-height: 34px;
     width: 34px;
     text-align: center;
-    color: #999;
+    color: white;
 }
 ul.breadcome-menu {
     padding-top: 8px;
@@ -829,8 +830,8 @@ ul.breadcome-menu li a{
     color:#fff;
 }
 .header-advance-area{
-	background: -webkit-linear-gradient(178deg, #e12503 0%, #85060c 100%);
-    background: linear-gradient(178deg, #e12503 0%, #85060c 100%);
+	background: -webkit-linear-gradient(178deg, #ffffff 0%, #e92868 100%);
+    background: linear-gradient(178deg, #e1034d 0%, #e1034d 100%);
 }
 .analysis-progrebar-ctn .progress {
     height: 5px;
@@ -840,7 +841,7 @@ ul.breadcome-menu li a{
     background: #24caa1;
 }
 .bg-red {
-    background: #eb4b4b;
+    background: #eb4b73;
 }
 .bg-blue {
     background: #2eb7f3;
@@ -1023,8 +1024,8 @@ ul.two-part-sp li{
 }
 .header-top-area {
     position: fixed;
-    background: -webkit-linear-gradient(178deg, #e12503 0%, #85060c 100%);
-    background: linear-gradient(178deg, #e12503 0%, #85060c 100%);
+    background: -webkit-linear-gradient(178deg, #e1034d 0%, #e1034d 100%);
+    background: linear-gradient(178deg, #e1034d 0%, #e1034d 100%);
     z-index: 99;
     left: 200px;
     right: 0;
@@ -1263,7 +1264,7 @@ ul#single-product-tab li{
 	text-transform:uppercase;
 }
 .single-pro-star, .list-star{
-	color: #e12503;
+	color: #e62c64;
 	font-size:14px;
 }
 .single-pro-star i{
@@ -2217,7 +2218,7 @@ ul.tab-custon-design li.active a, ul.tab-review-design li.active a{
     background-image: none;
     border: 1px solid #e5e6e7;
     border-radius: 1px;
-    color: inherit;
+    color: white;
     display: block;
     padding: 6px 12px;
     transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;

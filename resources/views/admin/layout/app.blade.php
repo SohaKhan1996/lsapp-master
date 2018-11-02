@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Dashboard V.1 | jeweler - Material Admin Template</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -66,6 +66,7 @@
     @include('admin.layout.header')
     @yield('content')
     @include('admin.layout.footer')
+
 <!-- jquery
 		============================================ -->
         <script src="js/vendor/jquery-1.11.3.min.js"></script>
@@ -117,6 +118,12 @@
         <script src="js/plugins.js"></script>
         <!-- main JS
             ============================================ -->
+        <!-- tab JS
+		============================================ -->
+        <script src="js/tab.js"></script>
+        <!-- wizard JS
+        ============================================ -->
+        <script src="js/wizard/jquery.steps.js"></script><script src="js/wizard/steps-active.js"></script>
         <script src="js/main.js"></script>
     </body>
     
