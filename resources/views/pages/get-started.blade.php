@@ -45,7 +45,7 @@
     </div>
 </div>
 <div class="container"  style="text-align:center;" >
-<button type="button" onclick="window.location='{{ url("kitchen-garden/get-started/vegetables") }}'">Get started</button>
+<button type="button" class="btn btn-primary" onclick="window.location='{{ url("kitchen-garden/get-started/vegetables") }}'">Get started</button>
 </div>
 <hr>
   @endsection
