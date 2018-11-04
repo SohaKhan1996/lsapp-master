@@ -12,10 +12,14 @@
 */
 
 
-// Route::get('/', function () {
-//     return view('index');
+Route::get('/admin-dashboard', function () {
+    return view('admin.pages.dashboard');
    
-// });
+});
+Route::get('/product-cart', function () {
+    return view('admin.pages.product-cart');
+   
+});
 /*
 Route::get('/users/{id}/{name}', function($id, $name){
     return 'This is user '.$name.' with an id of '.$id;
@@ -29,6 +33,19 @@ Route::get('/contact', 'PagesController@contact');
 Route::get('/product', 'PagesController@product');
 Route::get('product-detail', 'PagesController@productDetail');
 Route::get('/cart', 'PagesController@cart');
+<<<<<<< HEAD
+=======
+
+// admin
+
+Route::get('/admin', 'AdminController@admin');
+Route::get('/product-cart', 'AdminController@productCart');
+Route::get('/product-list', 'AdminController@productList');
+Route::get('/product-edit', 'AdminController@productEdit');
+Route::get('/product-detail', 'AdminController@productDetail');
+
+
+>>>>>>> soha
 Route::get('/services', 'PagesController@services');
 Route::get('/kitchen-garden', 'PagesController@kitchenGarden');
 Route::get('/get-started','PagesController@getstarted');
