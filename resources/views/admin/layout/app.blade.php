@@ -69,7 +69,13 @@
 
 <!-- jquery
 		============================================ -->
-        <script src="js/vendor/jquery-1.11.3.min.js"></script>
+        <script src="js/vendor/jquery-1.11.3.min.js"></script>    <!-- cropper CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/cropper/cropper.min.css">
+        <!-- cropper JS
+		============================================ -->
+        <script src="js/cropper/cropper.min.js"></script>
+        <script src="js/cropper/cropper-actice.js"></script>
         <!-- bootstrap JS
             ============================================ -->
         <script src="js/bootstrap.min.js"></script>

@@ -33,6 +33,7 @@ Route::get('/contact', 'PagesController@contact');
 Route::get('/product', 'PagesController@product');
 Route::get('product-detail', 'PagesController@productDetail');
 Route::get('/cart', 'PagesController@cart');
+Route::get('/services', 'PagesController@services');
 
 // admin
 
@@ -41,9 +42,9 @@ Route::get('/product-cart', 'AdminController@productCart');
 Route::get('/product-list', 'AdminController@productList');
 Route::get('/product-edit', 'AdminController@productEdit');
 Route::get('/product-detail', 'AdminController@productDetail');
+Route::get('/images-cropper', 'AdminController@imagesCropper');
 
 
-Route::get('/services', 'PagesController@services');
 
 Route::resource('posts', 'PostsController');
 Auth::routes();

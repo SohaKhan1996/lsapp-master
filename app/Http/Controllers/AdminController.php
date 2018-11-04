@@ -31,5 +31,9 @@ class AdminController extends Controller
         $title = 'Product List';
         return view('admin.pages.product-list')->with('title', $title);
     }
+    public function imagesCropper(){
+        $title = 'Image Cropper';
+        return view('admin.pages.images-cropper')->with('title', $title);
+    }
 
 }
