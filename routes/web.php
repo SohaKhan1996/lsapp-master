@@ -34,6 +34,7 @@ Route::get('/product', 'PagesController@product');
 Route::get('product-detail', 'PagesController@productDetail');
 Route::get('/cart', 'PagesController@cart');
 
+
 // admin
 
 Route::get('/admin', 'AdminController@admin');
@@ -51,6 +52,8 @@ Route::get('/kitchen-garden/get-started','PagesController@getstarted');
 Route::get('/kitchen-garden/get-started/vegetables', 'PagesController@vegetables');
 Route::get('/kitchen-garden/get-started/fruits','PagesController@fruits');
 Route::get('/kitchen-garden/get-started/inseason','PagesController@inseason');
+
+
 //Route::get('/kitchen-garden/get-started', ' PagesController@getstarted')->name('getstarted');
 //Route::post('/kitchen-garden/get-started', ' PagesController@getstarted')->name('getstarted');
 Route::resource('posts', 'PostsController');
