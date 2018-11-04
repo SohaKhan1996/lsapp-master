@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
 <!--===============================================================================================-->
 <link rel="icon" type="image/png" href="{{ URL::asset('images/icons/favicon.png') }}"/>
 <!--===============================================================================================-->
@@ -42,7 +46,7 @@
 <!-- Styles -->
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body >
+<body class="animsition", style="background-color: white;">
     @include('layouts.header')
     @yield('content')
     @include('layouts.footer')
@@ -56,8 +60,19 @@
     
         <!-- Container Selection1 -->
         <div id="dropDownSelect1"></div>
-    
-    <!--===============================================================================================-->
+
+        <script>
+            function myMap() {
+             var mapProp= {
+            center:new google.maps.LatLng(51.508742,-0.120850),
+            zoom:5,
+               };
+            var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+              }
+            </script>
+     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
+     
+     <!--===============================================================================================-->
     <script type="text/javascript" src="{{ URL::asset('vendor/jquery/jquery-3.2.1.min.js') }}"></script>
     <!--===============================================================================================-->
         <script type="text/javascript" src="{{ URL::asset('vendor/animsition/js/animsition.min.js') }}"></script>

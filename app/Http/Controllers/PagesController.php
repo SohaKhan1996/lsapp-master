@@ -44,4 +44,12 @@ class PagesController extends Controller
         );
         return view('pages.services')->with($data);
     }
+    public function kitchenGarden(){
+        $title= 'Kitchen Gardening';
+        return view('pages.kitchen-garden')->with('title',$title);
+    }
+    public function getstarted(){
+        $title= 'Kitchen Gardening';
+        return view('pages.get-started')->with('title',$title);
+    }
 }
