@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="container">
+<div class="container" >
+		<h3 style="text-align:center;">Select the food</h3>
 	<div class="row">
 		<form method="get">
 		<div class="form-group">
@@ -15,11 +16,13 @@
 		</div>
 		<div class="clearfix"></div>
 		
-		<input type="submit" value="Proceed" class="btn btn-success">
-		
+		<div class="container"  style="text-align:center;" >
+		<input type="submit" value="Proceed" class="btn btn-primary" >
+		</div>
 		</form>
 	</div>	
 </div>
+<hr>
 </body>
 </html>
 
