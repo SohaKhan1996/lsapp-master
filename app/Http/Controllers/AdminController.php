@@ -6,10 +6,6 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth:admin');
-    }
     public function admin(){
         $title = 'Admin-Dashboard';
         //return view('pages.index', compact('title'));
