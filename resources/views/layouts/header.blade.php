@@ -13,12 +13,12 @@
 	
 				<!-- Logo2 -->
 				<a href="/" class="logo2">
-					<img src="images/icons/logo.png" alt="IMG-LOGO">
+					<img src="/images/icons/logo.png" alt="IMG-LOGO">
 				</a>
 	
 				<div class="topbar-child2">
 						<div class="header-wrapicon2 m-r-13">
-								<img src="images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+								<img src="{{url('/images/icons/icon-header-01.png')}}" class="header-icon1 js-show-header-dropdown" alt="ICON">
 						</div>	
 						@if (Auth::guest())
 						<li><a href="{{ route('login') }}">Login</a></li>
@@ -55,7 +55,7 @@
 					<span class="linedivide1"></span>
 	
 					<div class="header-wrapicon2 m-r-13">
-						<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<img src="/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
 						<span class="header-icons-noti">0</span>
 	
 						<!-- Header cart noti -->
@@ -63,7 +63,7 @@
 							<ul class="header-cart-wrapitem">
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<img src="images/item-cart-01.jpg" alt="IMG">
+										<img src="/images/item-cart-01.jpg" alt="IMG">
 									</div>
 	
 									<div class="header-cart-item-txt">
@@ -79,7 +79,7 @@
 	
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<img src="images/item-cart-02.jpg" alt="IMG">
+										<img src="/images/item-cart-02.jpg" alt="IMG">
 									</div>
 	
 									<div class="header-cart-item-txt">
@@ -95,7 +95,7 @@
 	
 								<li class="header-cart-item">
 									<div class="header-cart-item-img">
-										<img src="images/item-cart-03.jpg" alt="IMG">
+										<img src="/images/item-cart-03.jpg" alt="IMG">
 									</div>
 	
 									<div class="header-cart-item-txt">
@@ -144,7 +144,7 @@
 			<div class="wrap_header_mobile">
 				<!-- Logo moblie -->
 				<a href="/" class="logo-mobile">
-					<img src="images/icons/logo.png" alt="IMG-LOGO">
+					<img src="/images/icons/logo.png" alt="IMG-LOGO">
 				</a>
 	
 				<!-- Button show menu -->
@@ -189,7 +189,7 @@
 						<span class="linedivide2"></span>
 	
 						<div class="header-wrapicon2">
-							<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+							<img src="/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
 							<span class="header-icons-noti">0</span>
 	
 							<!-- Header cart noti -->
@@ -197,7 +197,7 @@
 								<ul class="header-cart-wrapitem">
 									<li class="header-cart-item">
 										<div class="header-cart-item-img">
-											<img src="images/item-cart-01.jpg" alt="IMG">
+											<img src="/images/item-cart-01.jpg" alt="IMG">
 										</div>
 	
 										<div class="header-cart-item-txt">
@@ -213,7 +213,7 @@
 	
 									<li class="header-cart-item">
 										<div class="header-cart-item-img">
-											<img src="images/item-cart-02.jpg" alt="IMG">
+											<img src="/images/item-cart-02.jpg" alt="IMG">
 										</div>
 	
 										<div class="header-cart-item-txt">
@@ -229,7 +229,7 @@
 	
 									<li class="header-cart-item">
 										<div class="header-cart-item-img">
-											<img src="images/item-cart-03.jpg" alt="IMG">
+											<img src="/images/item-cart-03.jpg" alt="IMG">
 										</div>
 	
 										<div class="header-cart-item-txt">
