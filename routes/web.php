@@ -56,10 +56,24 @@ Route::get('/kitchen-garden/get-started/inseason','PagesController@inseason');
 //Route::get('/kitchen-garden/get-started', ' PagesController@getstarted')->name('getstarted');
 //Route::post('/kitchen-garden/get-started', ' PagesController@getstarted')->name('getstarted');
 Route::resource('posts', 'PostsController');
-Auth::routes();
+// Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');
 
-Auth::routes();
+// Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/login/custom', [
+    'uses' => 'Auth\LoginController@login',
+    'as' => 'login.custom'
+]);
+Route::group(['middleware'=>'auth'],function(){
+    Route::get('/home',function(){
+        return view('home');
+    })->name('home');;
+    Route::get('/dashboard',function(){
+        return view('dashboard');
+    })->name('dashboard');;
+
+});
