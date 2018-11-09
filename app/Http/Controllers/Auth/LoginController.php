@@ -4,29 +4,11 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-//use Illuminate\Http\Request;
-
+use Illuminate\Http\Request;
+use App\User;
+use Auth;
 class LoginController extends Controller
 {
-<<<<<<< HEAD
-
-    public function login(Request $request){
-        if(Auth::attempt([
-            'email'->$request->email, 
-            'password'->$request->password
-        ]))
-        {
-            $user= User::where('email', $request->email)->first();
-            if($user->is_admin())
-            {
-                return redirect()->route('admin-login');
-            }
-                return redirect()->route('home');
-        }
-        return redirect()->back();
-    }
-=======
->>>>>>> parent of 29c6d7b... login-multiuser
     /*
     |--------------------------------------------------------------------------
     | Login Controller
@@ -55,5 +37,20 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+    public function login(Request $request){
+      //dd($request->all());
+        if(Auth::attempt([
+            'email'=>$request->email,
+            'password'=>$request->password
+        ])){
+            $user=User::where('email',$request->email)->first();
+            if($user->is_admin()){
+                return redirect()->route('admin-login');
+            }
+            return redirect()->route('dashboard');
+        }
+        return redirect()->back();
     }
 }

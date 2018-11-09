@@ -26,7 +26,7 @@ Route::get('/users/{id}/{name}', function($id, $name){
 });
 */
 
-Route::get('/', 'PagesController@index');
+Route::get('/', 'PagesController@index')->name('home');
 Route::get('/about', 'PagesController@about');
 Route::get('/blog', 'PagesController@blog');
 Route::get('/contact', 'PagesController@contact');
@@ -37,7 +37,7 @@ Route::get('/services', 'PagesController@services');
 
 // admin
 
-Route::get('/admin', 'AdminController@admin')->name('admin-login');
+
 Route::get('/product-cart', 'AdminController@productCart');
 Route::get('/product-list', 'AdminController@productList');
 Route::get('/product-edit', 'AdminController@productEdit');
@@ -53,31 +53,23 @@ Route::get('/kitchen-garden/get-started','PagesController@getstarted');
 Route::get('/kitchen-garden/get-started/vegetables', 'PagesController@vegetables');
 Route::get('/kitchen-garden/get-started/fruits','PagesController@fruits');
 Route::get('/kitchen-garden/get-started/inseason','PagesController@inseason');
-//Route::get('/kitchen-garden/get-started', ' PagesController@getstarted')->name('getstarted');
-//Route::post('/kitchen-garden/get-started', ' PagesController@getstarted')->name('getstarted');
 Route::resource('posts', 'PostsController');
 Auth::routes();
 
-Route::get('/dashboard', 'DashboardController@index');
+
 
 Auth::routes();
 
-<<<<<<< HEAD
 //Route::get('/home', 'HomeController@index')->name('home');
 
-Route::post('/login/custom', [
+Route::post('/login/custom',[
     'uses' => 'Auth\LoginController@login',
     'as' => 'login.custom'
 ]);
-Route::group(['middleware'=>'auth'],function(){
-    Route::get('/',function(){
-        return view('index')->name('home');
-    });
-    Route::get('/dashboard',function(){
-        return view('dashboard');
-    })->name('dashboard');;
+
+Route::group(['middleware' => 'auth'], function(){
+    
+    Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+    Route::get('/admin', 'AdminController@admin')->name('admin-login');
 
 });
-=======
-Route::get('/home', 'HomeController@index')->name('home');
->>>>>>> parent of 29c6d7b... login-multiuser

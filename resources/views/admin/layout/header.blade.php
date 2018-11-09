@@ -165,7 +165,35 @@
                                             <li class="nav-item">
                                                 <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
                                                         <i class="fa fa-user adminpro-user-rounded header-riht-inf" aria-hidden="true"></i>
-                                                        <span class="admin-name">Advanda Cro</span>
+                                                        <span class="admin-name">
+                                                               
+                                                                <li class="dropdown">
+                                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                                                        {{ Auth::user()->name }}
+                                                                    </a>
+                                            
+                                                                    <ul class="dropdown-menu" role="menu">
+                                                                        {{-- <li>
+                                                                                <a href="/dashboard">
+                                                                                    Dashboard
+                                                                                </a>
+                                                                            </li> --}}
+                                                                        <li>
+                                                                            <a href="{{ route('logout') }}"
+                                                                                onclick="event.preventDefault();
+                                                                                         document.getElementById('logout-form').submit();">
+                                                                                Logout
+                                                                            </a>
+                                            
+                                                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                                                                {{ csrf_field() }}
+                                                                            </form>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            
+                                                            
+                                                        </span>
                                                         <i class="fa fa-angle-down adminpro-icon adminpro-down-arrow"></i>
                                                     </a>
                                                 <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
