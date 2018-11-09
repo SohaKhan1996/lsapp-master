@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
-use Auth; 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 //use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
+<<<<<<< HEAD
 
     public function login(Request $request){
         if(Auth::attempt([
@@ -26,6 +25,8 @@ class LoginController extends Controller
         }
         return redirect()->back();
     }
+=======
+>>>>>>> parent of 29c6d7b... login-multiuser
     /*
     |--------------------------------------------------------------------------
     | Login Controller

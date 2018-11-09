@@ -60,8 +60,9 @@ Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');
 
-// Auth::routes();
+Auth::routes();
 
+<<<<<<< HEAD
 //Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/login/custom', [
@@ -77,3 +78,6 @@ Route::group(['middleware'=>'auth'],function(){
     })->name('dashboard');;
 
 });
+=======
+Route::get('/home', 'HomeController@index')->name('home');
+>>>>>>> parent of 29c6d7b... login-multiuser
