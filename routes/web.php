@@ -35,6 +35,7 @@ Route::get('product-detail', 'PagesController@productDetail');
 Route::get('/cart', 'PagesController@cart');
 Route::get('/services', 'PagesController@services');
 
+
 // admin
 
 
