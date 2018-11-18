@@ -19,7 +19,7 @@ class AdminController extends Controller
 
     public function productDetail(){
         $title = 'Product Detail';
-        return view('admin.pages.product-detail')->with('title', $title);
+        return view('admin.pages.admin-product-detail')->with('title', $title);
     }
 
     public function productEdit(){

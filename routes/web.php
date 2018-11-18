@@ -42,7 +42,7 @@ Route::get('/services', 'PagesController@services');
 Route::get('/product-cart', 'AdminController@productCart');
 Route::get('/product-list', 'AdminController@productList');
 Route::get('/product-edit', 'AdminController@productEdit');
-Route::get('/product-detail', 'AdminController@productDetail');
+Route::get('/admin-product-detail', 'AdminController@productDetail');
 Route::get('/images-cropper', 'AdminController@imagesCropper');
 
 
