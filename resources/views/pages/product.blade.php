@@ -55,10 +55,32 @@
 						  </script>
 						  <br>
 						<h4 class="m-text14 p-b-7">
-							Categories
+							Plant Life
 						</h4>
-
-						<ul class="p-b-54">
+						<label class="containercheck">Seasonal
+							<input type="checkbox" checked="checked">
+							<span class="checkmark"></span>
+						</label>
+						<label class="containercheck">Annual
+								<input type="checkbox" >
+								<span class="checkmark"></span>
+						</label>
+						<label class="containercheck">Evergreen
+								<input type="checkbox">
+								<span class="checkmark"></span>
+						</label>
+						<h4 class="m-text14 p-b-7">
+								Watering
+						</h4>
+						<label class="containercheck">I can water regularly
+								<input type="radio" checked="checked" name="radio">
+								<span class="checkmarkradio"></span>
+						</label>
+						<label class="containercheck">I have watering issue
+								<input type="radio" checked="checked" name="radio">
+								<span class="checkmarkradio"></span>
+						</label>
+						{{-- <ul class="p-b-54">
 							<li class="p-t-4">
 								<a href="#" class="s-text13 active1">
 									All
@@ -88,13 +110,10 @@
 									Accesories
 								</a>
 							</li>
-						</ul>
+						</ul> --}}
 
-						<!--  -->
-						<h4 class="m-text14 p-b-32">
-							Filters
-						</h4>
-
+					
+						
 						<div class="filter-price p-t-22 p-b-50 bo3">
 							<div class="m-text15 p-b-17">
 								Price
