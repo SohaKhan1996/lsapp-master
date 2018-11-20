@@ -21,20 +21,17 @@
                 </li>
 
                 <li class="item-menu-mobile">
-                    <a href="/product">Sale</a>
-                </li>
-
-                <li class="item-menu-mobile">
-                    <a href="/cart">Features</a>
-                </li>
-
-                <li class="item-menu-mobile">
                     <a href="/blog">Blog</a>
                 </li>
 
                 <li class="item-menu-mobile">
                     <a href="/about">About</a>
                 </li>
+                <li class="item-menu-mobile">
+                    <a href="/blog">Blog</a>
+                </li>
+
+                
 
                 <li class="item-menu-mobile">
                     <a href="/contact">Contact</a>

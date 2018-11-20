@@ -6,11 +6,11 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
-    public function index(){
-        $title = 'Home';
-        //return view('pages.index', compact('title'));
-        return view('index')->with('title', $title);
-    }
+    // public function index(){
+    //     $title = 'Home';
+    //     //return view('pages.index', compact('title'));
+    //     return view('index')->with('title', $title);
+    // }
 
     public function about(){
         $title = 'About Us';

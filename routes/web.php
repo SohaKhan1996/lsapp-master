@@ -26,12 +26,13 @@ Route::get('/users/{id}/{name}', function($id, $name){
 });
 */
 
-Route::get('/', 'PagesController@index')->name('home');
+Route::get('/', 'HomeController@index');
 Route::get('/about', 'PagesController@about');
 Route::get('/blog', 'PagesController@blog');
 Route::get('/contact', 'PagesController@contact');
-Route::get('/product', 'PagesController@product');
-Route::get('product-detail', 'PagesController@productDetail');
+Route::get('/product', 'ShopController@index')->name('shop.index');
+Route::get('/product/{product}', 'ShopController@show')->name('shop.show');
+//Route::get('/product-detail', 'PagesController@productDetail');
 Route::get('/cart', 'PagesController@cart');
 Route::get('/services', 'PagesController@services');
 
