@@ -197,12 +197,12 @@
 							 
 
 							<div class="block2-txt p-t-20">
-								<a href="/product-detail" class="block2-name dis-block s-text3 p-b-5">
+								<a href="{{route('shop.show',['product' => $product->slug])}}" class="block2-name dis-block s-text3 p-b-5">
 									{{$product->name}}
 								</a>
 
 								<span class="block2-price m-text6 p-r-5">
-									{{$product->price}}
+										{{"Rs.".$product->price. ".00"}}
 								</span>
 							</div>
 						</div>

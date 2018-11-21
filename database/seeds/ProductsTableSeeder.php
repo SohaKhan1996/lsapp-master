@@ -20,7 +20,7 @@ class ProductsTableSeeder extends Seeder
         // ]);
         Product::create([
             'name' => 'Adenium',
-            'slug' => 'Plant',
+            'slug' => 'Adenium',
             'details' => 'Shrub',
             'price' => 500,
             'description' =>'Perennial',
