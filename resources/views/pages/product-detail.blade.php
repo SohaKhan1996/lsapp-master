@@ -114,9 +114,15 @@
 
 							<div class="btn-addcart-product-detail size9 trans-0-4 m-t-10 m-b-10">
 								<!-- Button -->
-								<button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
-									Add to Cart
-								</button>
+								<form action="{{route('cart.store')}}" method="POST">
+									{{ csrf_field()}}
+								<input type="hidden" name="id" value="{{$product->id}}">
+								<input type="hidden" name="name" value="{{$product->name}}">
+								<input type="hidden" name="price" value="{{$product->price}}">
+								
+									<button type="submit" class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+										Add to Cart
+									</button>
 							</div>
 						</div>
 					</div>
@@ -201,9 +207,17 @@
 
 									<div class="block2-btn-addcart w-size1 trans-0-4">
 										<!-- Button -->
-										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+										
+									<form action="{{route('cart.store')}}" method="_POST">
+										{{ csrf_field()}}
+									<input type="hidden" name="id" value="{{$product->id}}">
+									<input type="hidden" name="name" value="{{$product->name}}">
+									<input type="hidden" name="price" value="{{$product->price}}">
+									
+										<button type="submit" class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
 											Add to Cart
 										</button>
+									</form>
 									</div>
 								</div>
 							</div>

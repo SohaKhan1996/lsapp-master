@@ -144,7 +144,6 @@ return [
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
         Illuminate\Cache\CacheServiceProvider::class,
-        Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
         Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class,
         Illuminate\Cookie\CookieServiceProvider::class,
         Illuminate\Database\DatabaseServiceProvider::class,
@@ -165,7 +164,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Unisharp\Ckeditor\ServiceProvider::class,
-
+        Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -202,7 +201,6 @@ return [
         'Broadcast' => Illuminate\Support\Facades\Broadcast::class,
         'Bus' => Illuminate\Support\Facades\Bus::class,
         'Cache' => Illuminate\Support\Facades\Cache::class,
-        'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
         'Config' => Illuminate\Support\Facades\Config::class,
         'Cookie' => Illuminate\Support\Facades\Cookie::class,
         'Crypt' => Illuminate\Support\Facades\Crypt::class,
@@ -231,6 +229,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
 
     ],
 
