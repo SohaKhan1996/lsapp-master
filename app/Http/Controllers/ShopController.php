@@ -14,7 +14,7 @@ class ShopController extends Controller
     public function index()
     {
         $title="Products";
-        $products = Product::inRandomOrder()->take(5)->get();
+        $products = Product::inRandomOrder()->take(1)->get();
         return view('pages.product')->with('title',$title)->with('products',$products);
     }
 
@@ -22,11 +22,7 @@ class ShopController extends Controller
     {
         $title="Products";
         $product=Product::where('slug',$slug)->firstOrFail();
-        $relatedProducts = Product::where('slug','!=', $slug)->inRandomOrder()->take(4)->get(); 
-        return view('pages.product-detail')->with('title',$title)->with([
-            'product'=>$product,
-            'relatedProducts'=>$relatedProducts,
-    ]);
+        return view('pages.product-detail')->with('title',$title)->with('product',$product);
     }
 
    }
