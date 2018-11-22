@@ -41,6 +41,7 @@
 							<th class="column-2">Product</th>
 							<th class="column-3">Price</th>
 							<th class="column-4 p-l-70">Quantity</th>
+							<th class="column-1"></th>
 							<th class="column-5">Total</th>
 						</tr>
 						@foreach (Cart::content() as $item)
@@ -63,8 +64,19 @@
 									<button class="btn-num-product-up color1 flex-c-m size7 bg8 eff2">
 										<i class="fs-12 fa fa-plus" aria-hidden="true"></i>
 									</button>
+									
 								</div>
+								
 							</td>
+							<td class="column-1">
+								<form action="{{route('cart.destroy', $item->rowId)}}" method="POST">
+									{{ csrf_field()}}
+									{{ method_field('DELETE')}}
+								<button type="submit" class="cart-options">
+									<span class="glyphicon">&#xe020;</span> Remove
+								</button>
+								</form>
+								</td>
 							<td class="column-5">$36.00</td>
 						</tr>
 						@endforeach
@@ -108,8 +120,17 @@
 					</span>
 
 					<span class="m-text21 w-size20 w-full-sm">
-						$39.00
+						{{Cart::subtotal()}}<br>
+						
 					</span>
+					<span class="s-text18 w-size19 w-full-sm">
+							Tax:
+						</span>
+	
+						<span class="m-text21 w-size20 w-full-sm">
+							
+							{{Cart::tax()}}
+						</span>
 				</div>
 
 				<!--  -->
@@ -160,7 +181,7 @@
 					</span>
 
 					<span class="m-text21 w-size20 w-full-sm">
-						$39.00
+						{{Cart::total()}}
 					</span>
 				</div>
 
@@ -171,7 +192,13 @@
 					</button>
 				</div>
 				@else
-					<h3>No items found</h3>
+					<h3>No items in Cart</h3>
+					<br>
+							<!-- Button -->
+							<a href="{{route('shop.index')}}" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
+								Continue Shopping
+							</a>
+						
 				@endif
 			</div>
 		</div>

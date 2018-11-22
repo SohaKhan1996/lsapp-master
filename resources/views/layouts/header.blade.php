@@ -56,8 +56,9 @@
 	
 					<div class="header-wrapicon2 m-r-13">
 						<img src="/images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
-						<span class="header-icons-noti">0</span>
-	
+						@if (Cart::instance('default')->count()>0)
+					<span class="header-icons-noti">{{Cart::instance('default')->count()}}</span>
+						@endif
 						<!-- Header cart noti -->
 						<div class="header-cart header-dropdown">
 							<ul class="header-cart-wrapitem">
