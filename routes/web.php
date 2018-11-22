@@ -33,7 +33,8 @@ Route::get('/contact', 'PagesController@contact');
 Route::get('/product', 'ShopController@index')->name('shop.index');
 Route::get('/product/{product}', 'ShopController@show')->name('shop.show');
 //Route::get('/product-detail', 'PagesController@productDetail');
-Route::get('/cart', 'PagesController@cart');
+//Route::get('/cart', 'PagesController@cart');
+Route::get('/cart', 'CartController@index')->name('shop.index');
 Route::get('/services', 'PagesController@services');
 
 
@@ -63,7 +64,8 @@ Auth::routes();
 Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');
-
+// post methods
+Route::post('/cart','CartController@store')->name('cart.store');
 Route::post('/login/custom',[
     'uses' => 'Auth\LoginController@login',
     'as' => 'login.custom'
