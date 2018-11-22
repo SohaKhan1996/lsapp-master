@@ -33,10 +33,13 @@ Route::get('/contact', 'PagesController@contact');
 Route::get('/product', 'ShopController@index')->name('shop.index');
 Route::get('/product/{product}', 'ShopController@show')->name('shop.show');
 //Route::get('/product-detail', 'PagesController@productDetail');
-Route::get('/cart', 'PagesController@cart');
+Route::get('/cart', 'CartController@index')->name('cart.index');
+Route::post('/cart', 'CartController@store')->name('cart.store');
 Route::get('/services', 'PagesController@services');
 
-
+Route::get('empty',function(){
+    Cart::destroy();
+});
 // admin
 
 

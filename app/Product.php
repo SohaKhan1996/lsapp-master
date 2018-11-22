@@ -12,4 +12,8 @@ class Product extends Model
     // function formatcurrency($floatcurr, $curr = "USD"){
     // $currencies['PKR'] = array(2,'.',','); 
     // }         //  Pakistan Rupee
+
+    // public function scopeRelatedProducts($query){
+    //     return $query->inRandomOrder()->take(4);
+    // }
 }

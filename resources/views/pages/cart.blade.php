@@ -6,13 +6,35 @@
 			Cart
 		</h2>
 	</section>
-
+	
+	
 	<!-- Cart -->
 	<section class="cart bgwhite p-t-70 p-b-100">
+			
 		<div class="container">
+				<div>
+						@if (session()->has('success_message'))
+							<div class="alert alert-success">
+								{{session()->get('success_message')}}
+							</div>
+						@endif
+			
+						@if(count($errors)>0)
+							<div class="alert alert-danger">
+								<ul>
+									@foreach($errors->all() as $error)
+										<li>{{$error}}</li>
+									@endforeach
+								</ul>
+							</div>
+						@endif	
+					</div>
 			<!-- Cart item -->
+			@if(Cart::count() > 0)
+				<h2>{{ Cart::count()}} items in Shopping Cart  </h2>
+				
 			<div class="container-table-cart pos-relative">
-				<div class="wrap-table-shopping-cart bgwhite">
+				<div class="wrap-table-shopping-cart bgwhite">		
 					<table class="table-shopping-cart">
 						<tr class="table-head">
 							<th class="column-1"></th>
@@ -21,15 +43,15 @@
 							<th class="column-4 p-l-70">Quantity</th>
 							<th class="column-5">Total</th>
 						</tr>
-
+						@foreach (Cart::content() as $item)
 						<tr class="table-row">
 							<td class="column-1">
 								<div class="cart-img-product b-rad-4 o-f-hidden">
-									<img src="images/item-10.jpg" alt="IMG-PRODUCT">
+								<a href="{{route('shop.show', $item->model->slug) }}"><img src="{{asset('/images/products/'.$item->model->slug.'.jpg')}}" alt="IMG-PRODUCT"></a>
 								</div>
 							</td>
-							<td class="column-2">Men Tshirt</td>
-							<td class="column-3">$36.00</td>
+						<td class="column-2"><a href="{{route('shop.show', $item->model->slug)}}">{{$item->model->name}}</a></td>
+							<td class="column-3">{{"Rs. " . $item->model->price . ".00"}}</td>
 							<td class="column-4">
 								<div class="flex-w bo5 of-hidden w-size17">
 									<button class="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
@@ -45,30 +67,8 @@
 							</td>
 							<td class="column-5">$36.00</td>
 						</tr>
-
-						<tr class="table-row">
-							<td class="column-1">
-								<div class="cart-img-product b-rad-4 o-f-hidden">
-									<img src="images/item-05.jpg" alt="IMG-PRODUCT">
-								</div>
-							</td>
-							<td class="column-2">Mug Adventure</td>
-							<td class="column-3">$16.00</td>
-							<td class="column-4">
-								<div class="flex-w bo5 of-hidden w-size17">
-									<button class="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
-										<i class="fs-12 fa fa-minus" aria-hidden="true"></i>
-									</button>
-
-									<input class="size8 m-text18 t-center num-product" type="number" name="num-product2" value="1">
-
-									<button class="btn-num-product-up color1 flex-c-m size7 bg8 eff2">
-										<i class="fs-12 fa fa-plus" aria-hidden="true"></i>
-									</button>
-								</div>
-							</td>
-							<td class="column-5">$16.00</td>
-						</tr>
+						@endforeach
+						
 					</table>
 				</div>
 			</div>
@@ -170,6 +170,9 @@
 						Proceed to Checkout
 					</button>
 				</div>
+				@else
+					<h3>No items found</h3>
+				@endif
 			</div>
 		</div>
 	</section>
