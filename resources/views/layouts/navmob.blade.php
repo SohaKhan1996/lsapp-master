@@ -21,7 +21,7 @@
                 </li>
 
                 <li class="item-menu-mobile">
-                    <a href="/blog">Blog</a>
+                    <a href="/posts">Blog</a>
                 </li>
 
                 <li class="item-menu-mobile">
