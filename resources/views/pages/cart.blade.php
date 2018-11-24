@@ -76,6 +76,13 @@
 									<span class="glyphicon">&#xe020;</span> Remove
 								</button>
 								</form>
+								<form action="{{route('cart.switchToSaveForLater', $item->rowId)}}" method="POST">
+										{{ csrf_field()}}
+									<button type="submit" class="cart-options">
+											Save for later
+									</button>
+									</form>
+								
 								</td>
 							<td class="column-5">$36.00</td>
 						</tr>
@@ -85,6 +92,7 @@
 				</div>
 			</div>
 
+			
 			<div class="flex-w flex-sb-m p-t-25 p-b-25 bo8 p-l-35 p-r-60 p-lr-15-sm">
 				<div class="flex-w flex-m w-full-sm">
 					<div class="size11 bo4 m-r-10">
@@ -107,6 +115,7 @@
 				</div>
 			</div>
 
+			
 			<!-- Total -->
 			<div class="bo9 w-size18 p-l-40 p-r-40 p-t-30 p-b-38 m-t-30 m-r-0 m-l-auto p-lr-15-sm">
 				<h5 class="m-text20 p-b-24">
@@ -200,8 +209,101 @@
 							</a>
 						
 				@endif
+
+				
+			</div>
+			<div>
+					@if (session()->has('success_message'))
+						<div class="alert alert-success">
+							{{session()->get('success_message')}}
+						</div>
+					@endif
+		
+					@if(count($errors)>0)
+						<div class="alert alert-danger">
+							<ul>
+								@foreach($errors->all() as $error)
+									<li>{{$error}}</li>
+								@endforeach
+							</ul>
+						</div>
+					@endif	
+				</div>
+			{{-- Save for later --}}
+			@if(Cart::instance('saveForLater')->count() > 0)
+			<h2>{{ Cart::instance('saveForLater')->count()}} items Saved for Later  </h2>
+			
+		<div class="container-table-cart pos-relative">
+			<div class="wrap-table-shopping-cart bgwhite">		
+				<table class="table-shopping-cart">
+					<tr class="table-head">
+						<th class="column-1"></th>
+						<th class="column-2">Product</th>
+						<th class="column-3">Price</th>
+						<th class="column-4 p-l-70">Quantity</th>
+						<th class="column-1"></th>
+						<th class="column-5">Total</th>
+					</tr>
+					@foreach (Cart::instance('saveForLater')->content() as $item)
+					<tr class="table-row">
+						<td class="column-1">
+							<div class="cart-img-product b-rad-4 o-f-hidden">
+							<a href="{{route('shop.show', $item->model->slug) }}"><img src="{{asset('/images/products/'.$item->model->slug.'.jpg')}}" alt="IMG-PRODUCT"></a>
+							</div>
+						</td>
+					<td class="column-2"><a href="{{route('shop.show', $item->model->slug)}}">{{$item->model->name}}</a></td>
+						<td class="column-3">{{"Rs. " . $item->model->price . ".00"}}</td>
+						<td class="column-4">
+							<div class="flex-w bo5 of-hidden w-size17">
+								<button class="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
+									<i class="fs-12 fa fa-minus" aria-hidden="true"></i>
+								</button>
+
+								<input class="size8 m-text18 t-center num-product" type="number" name="num-product1" value="1">
+
+								<button class="btn-num-product-up color1 flex-c-m size7 bg8 eff2">
+									<i class="fs-12 fa fa-plus" aria-hidden="true"></i>
+								</button>
+								
+							</div>
+							
+						</td>
+						<td class="column-1">
+							
+							<form action="{{route('saveForLater.destroy', $item->rowId)}}" method="POST">
+									{{ csrf_field()}}
+									{{ method_field('DELETE')}}
+								<button type="submit" class="cart-options">
+										<span class="glyphicon">&#xe020;</span> Remove
+								</button>
+								</form>
+								<form action="{{route('saveForLater.switchToCart', $item->rowId)}}" method="POST">
+										{{ csrf_field()}}
+									<button type="submit" class="cart-options">
+											Move To Cart
+									</button>
+									</form>
+							</td>
+						<td class="column-5">$36.00</td>
+					</tr>
+					@endforeach
+					
+				
+			
+			@else
+				<div class="container">
+					<h3>You have no items saved for later</h3>
+				</div>
+				@endif
+			</table>
 			</div>
 		</div>
+
+
+		</div>
+		
+	</div>
+
 	</section>
 
 

@@ -106,7 +106,16 @@ class CartController extends Controller
     {
        $item=Cart::get($id);
        Cart::remove($id);
-       Cart::instance(saveForLater)->add($item->id, $request->name, 1, $request->price)
+
+       $duplicates= Cart::instance('saveForLater')->search(function($cartItem, $rowId) use ($id){
+            return $rowId === $id;
+       });
+
+       if($duplicates->isNotEmpty()){
+           return redirect()->route('cart.index')->with('success_message', 'Item is already Saved for Later!');
+       }
+
+       Cart::instance('saveForLater')->add($item->id, $item->name, 1, $item->price)
             ->associate('App\Product');
         return redirect()->route('cart.index')->with('success_message','Item has been saved for later');
     }

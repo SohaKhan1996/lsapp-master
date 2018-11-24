@@ -30,6 +30,8 @@ Route::get('/', 'HomeController@index');
 Route::get('/about', 'PagesController@about');
 Route::get('/blog', 'PagesController@blog');
 Route::get('/contact', 'PagesController@contact');
+Route::get('/services', 'PagesController@services');
+
 Route::get('/product', 'ShopController@index')->name('shop.index');
 Route::get('/product/{product}', 'ShopController@show')->name('shop.show');
 //Route::get('/product-detail', 'PagesController@productDetail');
@@ -37,10 +39,13 @@ Route::get('/cart', 'CartController@index')->name('cart.index');
 Route::post('/cart', 'CartController@store')->name('cart.store');
 Route::delete('/cart/{product}', 'CartController@destroy')->name('cart.destroy');
 Route::post('/cart/switchToSaveForLater/{product}', 'CartController@switchToSaveForLater')->name('cart.switchToSaveForLater');
-Route::get('/services', 'PagesController@services');
+
+Route::delete('/saveForLater/{product}', 'SaveForLaterController@destroy')->name('saveForLater.destroy');
+Route::post('/saveForLater/switchToSaveForLater/{product}', 'SaveForLaterController@switchToCart')->name('saveForLater.switchToCart');
+
 
 Route::get('empty',function(){
-    Cart::destroy();
+    Cart::instance('saveForLater')->destroy();
 });
 // admin
 
