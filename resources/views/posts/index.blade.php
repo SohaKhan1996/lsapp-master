@@ -19,7 +19,7 @@
                         @if(count($posts) > 0)
                         @foreach($posts as $post)
 						<div class="item-blog p-b-80">
-							<a href="/blog/blog-detail.html" class="item-blog-img pos-relative dis-block hov-img-zoom">
+							<a href="/posts/{{$post->id}}" class="item-blog-img pos-relative dis-block hov-img-zoom">
 								<img style="width:100%" src="/storage/cover_images/{{$post->cover_image}}">
                     
 
