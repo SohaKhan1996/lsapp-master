@@ -308,3 +308,11 @@
 
 
 @endsection
+
+{{-- @section('extra-js')
+	<script>
+		(function){
+
+		}
+	</script>
+@endsection --}}

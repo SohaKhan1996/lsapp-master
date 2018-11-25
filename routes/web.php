@@ -26,7 +26,7 @@ Route::get('/users/{id}/{name}', function($id, $name){
 });
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@index')->name('home');
 Route::get('/about', 'PagesController@about');
 Route::get('/blog', 'PagesController@blog');
 Route::get('/contact', 'PagesController@contact');
@@ -64,7 +64,7 @@ Route::get('/kitchen-garden', 'PagesController@kitchenGarden');
 Route::get('/kitchen-garden/get-started','PagesController@getstarted');
 Route::get('/kitchen-garden/get-started/vegetables', 'PagesController@vegetables');
 Route::get('/kitchen-garden/get-started/fruits','PagesController@fruits');
-Route::get('/kitchen-garden/get-started/inseason','PagesController@inseason');
+Route::get('/gardenplanner','PagesController@gardenplanner');
 Route::resource('posts', 'PostsController');
 Auth::routes();
 

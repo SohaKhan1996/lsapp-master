@@ -50,6 +50,7 @@
     @include('layouts.header')
     @yield('content')
     @include('layouts.footer')
+    {{-- @yield('extra-js') --}}
         
         <!-- Back to top -->
         <div class="btn-back-to-top bg0-hov" id="myBtn">

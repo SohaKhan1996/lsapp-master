@@ -24,6 +24,9 @@
         transition: function(url){ window.location.href = url; }
     });
     
+
+
+    
     /*[ Back to top ]
     ===========================================================*/
     var windowH = $(window).height()/2;
