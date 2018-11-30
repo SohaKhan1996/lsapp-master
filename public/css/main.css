@@ -99,6 +99,177 @@ body, html {
   height: 100%;
 }
 
+[ Table ]*/
+
+.limiter {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-table100 {
+  width: 100%;
+  /* min-height: 100vh; */
+  background: white;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 33px 30px;
+}
+
+.wrap-table100 {
+  width: 1100px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  display: table;
+  margin: 3;
+}
+
+@media screen and (max-width: 1200px) {
+  .table {
+    display: block;
+  }
+}
+
+.rowt {
+  display: table-row;
+  background-color: white;
+ 
+}
+
+.rowt.header {
+  color: #ffffff;
+  background: rgb(219,120,122);
+  font-size:20px;
+}
+
+@media screen and (max-width: 768px) {
+  .rowt {
+    display: block;
+  }
+
+  .rowt.header {
+    padding: 0;
+    height: 10px;
+    font:20px;
+  }
+
+  .rowt.header .cell {
+    display: none;
+    
+  }
+
+  .rowt .cell:before {
+    font-family: Poppins-Bold;
+    font-size: 18px;
+    color: #808080;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-weight: unset !important;
+    margin-right: 13px;
+    margin-bottom: 13px;
+    content: attr(data-title);
+    min-width: 150px;
+    display: block;
+  }
+}
+
+.cell {
+  display: table-cell;
+  margin-right: 13px;
+}
+
+.myDiv {
+  position: relative;  /*Parent MUST be relative*/
+  z-index: 3;
+  background: rgb(35, 133, 179);
+  
+  /*Set width/height of the div in 'parent'*/
+  
+  height: 15px;
+}
+.myDiv:before {
+  content: "";
+  position: absolute; /*set 'child' to be absolute*/
+  z-index: -1;  /*Make this lower so text appears in front*/
+  /*You can choose to align it left, right, top or bottom here*/
+  top: 0;
+  right: 0;
+  bottom: 60%;
+  left: 0;
+  background: rgb(117, 212, 53);
+}
+.blank {
+  position: relative;  /*Parent MUST be relative*/
+  z-index: 3;
+  background: white;
+  
+  /*Set width/height of the div in 'parent'*/
+  
+  height: 15px;
+}
+.blank:before {
+  content: "";
+  position: absolute; /*set 'child' to be absolute*/
+  z-index: -1;  /*Make this lower so text appears in front*/
+  /*You can choose to align it left, right, top or bottom here*/
+  top: 0;
+  right: 0;
+  bottom: 60%;
+ 
+  background:white;
+}
+.sow {
+  position: relative;  /*Parent MUST be relative*/
+  z-index: 3;
+  background: rgb(35, 133, 179);
+  
+  /*Set width/height of the div in 'parent'*/
+  
+  height: 15px;
+}
+.sow:before {
+  content: "";
+  position: absolute; /*set 'child' to be absolute*/
+  z-index: -1;  /*Make this lower so text appears in front*/
+  /*You can choose to align it left, right, top or bottom here*/
+  top: 0;
+  right: 0;
+  bottom: 60%;
+  left: 0;
+  background: white;
+}
+.harvest {
+  position: relative;  /*Parent MUST be relative*/
+  z-index: 3;
+  background: white;
+  
+  /*Set width/height of the div in 'parent'*/
+  
+  height: 15px;
+}
+.harvest:before {
+  content: "";
+  position: absolute; /*set 'child' to be absolute*/
+  z-index: -1;  /*Make this lower so text appears in front*/
+  /*You can choose to align it left, right, top or bottom here*/
+  top: 0;
+  right: 0;
+  bottom: 60%;
+  left: 0;
+  border:1px;
+  background: rgb(117, 212, 53);
+}
+
 /* The hero image */
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */

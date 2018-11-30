@@ -8,6 +8,7 @@
             </li>
             <li>
                 <a href="/product">Shop</a>
+                
             </li>
             <li>
                 <a href="/posts">Blog</a>

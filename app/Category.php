@@ -10,4 +10,8 @@ class Category extends Model
          
         return $this->belongsToMany('App\Product');
     }
+    public function plant(){
+         
+        return $this->hasMany('App\Plant');
+    }
 }

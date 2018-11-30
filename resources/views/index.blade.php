@@ -4,15 +4,18 @@
 	<section class="slide1">
 		<div class="wrap-slick1">
 			<div class="slick1">
-				<div class="item-slick1 item1-slick1" style="background-image: url(images/master-slide-02.jpg);">
+				<div class="item-slick1 item1-slick1" style="background-image: url(images/Etsy-1.jpg);">
 					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+						<div style="background-color:'grey'">
 						<span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
-							Women Collection 2018
+								Modern techniques for Gardening
 						</span>
 
 						<h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
-							New arrivals
+								"Where flowers bloom so does hope."
+							
 						</h2>
+					</div>
 
 						<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="zoomIn">
 							<!-- Button -->
@@ -25,14 +28,18 @@
 
 				<div class="item-slick1 item2-slick1" style="background-image: url(images/master-slide-03.jpg);">
 					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+						
+ 
+		<div class="hero-text">
 						<span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="rollIn">
-							Women Collection 2018
+								No more maintainence for plants
 						</span>
 
 						<h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="lightSpeedIn">
-							New arrivals
+								Plant Bot ensures full bloom
 						</h2>
-
+					</div>
+  
 						<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="slideInUp">
 							<!-- Button -->
 							<a href="/product" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
@@ -42,20 +49,20 @@
 					</div>
 				</div>
 
-				<div class="item-slick1 item3-slick1" style="background-image: url(images/master-slide-04.jpg);">
+				<div class="item-slick1 item3-slick1" style="background-image: url(images/gardener.jpg);">
 					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
 						<span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="rotateInDownLeft">
-							Women Collection 2018
+							Trained and Professional Gardeners and Landscapers
 						</span>
 
 						<h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="rotateInUpRight">
-							New arrivals
+							Call for a Gardener Service
 						</h2>
 
 						<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="rotateIn">
 							<!-- Button -->
 							<a href="/product" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-								Shop Now
+								Call Now
 							</a>
 						</div>
 					</div>
@@ -77,7 +84,7 @@
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
 							<a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
-								Dresses
+								Plants
 							</a>
 						</div>
 					</div>
@@ -89,7 +96,7 @@
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
 							<a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
-								Sunglasses
+								Tools
 							</a>
 						</div>
 					</div>
@@ -103,7 +110,7 @@
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
 							<a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
-								Watches
+								Plant Bot
 							</a>
 						</div>
 					</div>
@@ -115,7 +122,7 @@
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
 							<a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
-								Footerwear
+								Containers
 							</a>
 						</div>
 					</div>
@@ -129,7 +136,7 @@
 						<div class="block1-wrapbtn w-size2">
 							<!-- Button -->
 							<a href="#" class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4">
-								Bags
+								Decoration
 							</a>
 						</div>
 					</div>
@@ -233,11 +240,11 @@
 
 						<div class="ab-t-l sizefull flex-col-c-m p-l-15 p-r-15">
 							<span class="m-text9 p-t-45 fs-20-sm">
-								The Beauty
+								All about
 							</span>
 
 							<h3 class="l-text1 fs-35-sm">
-								Lookbook
+								Vertical Gardening
 							</h3>
 
 							<a href="#" class="s-text4 hov2 p-t-20 ">
