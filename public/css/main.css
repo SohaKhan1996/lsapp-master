@@ -191,11 +191,12 @@ body, html {
 .myDiv {
   position: relative;  /*Parent MUST be relative*/
   z-index: 3;
-  background: rgb(35, 133, 179);
+  background: #FE6666;
   
   /*Set width/height of the div in 'parent'*/
-  
-  height: 15px;
+  border-top: 10px solid white;
+  border-bottom: 10px solid white;
+  height: 5px;
 }
 .myDiv:before {
   content: "";
@@ -204,15 +205,17 @@ body, html {
   /*You can choose to align it left, right, top or bottom here*/
   top: 0;
   right: 0;
-  bottom: 60%;
+  bottom: 50%;
   left: 0;
-  background: rgb(117, 212, 53);
+  background:#ffb0b0 ;
+  border-bottom: 5px solid white;
 }
 .blank {
   position: relative;  /*Parent MUST be relative*/
   z-index: 3;
   background: white;
-  
+  border-top: 10px solid white;
+  border-bottom: 10px solid white;
   /*Set width/height of the div in 'parent'*/
   
   height: 15px;
@@ -224,38 +227,19 @@ body, html {
   /*You can choose to align it left, right, top or bottom here*/
   top: 0;
   right: 0;
-  bottom: 60%;
+  bottom: 50%;
  
   background:white;
-}
-.sow {
-  position: relative;  /*Parent MUST be relative*/
-  z-index: 3;
-  background: rgb(35, 133, 179);
-  
-  /*Set width/height of the div in 'parent'*/
-  
-  height: 15px;
-}
-.sow:before {
-  content: "";
-  position: absolute; /*set 'child' to be absolute*/
-  z-index: -1;  /*Make this lower so text appears in front*/
-  /*You can choose to align it left, right, top or bottom here*/
-  top: 0;
-  right: 0;
-  bottom: 60%;
-  left: 0;
-  background: white;
 }
 .harvest {
   position: relative;  /*Parent MUST be relative*/
   z-index: 3;
-  background: white;
-  
+  background: #FE6666;
+  border-top: 10px solid white;
+  border-bottom: 10px solid white;
   /*Set width/height of the div in 'parent'*/
   
-  height: 15px;
+  height: 5px;
 }
 .harvest:before {
   content: "";
@@ -264,10 +248,35 @@ body, html {
   /*You can choose to align it left, right, top or bottom here*/
   top: 0;
   right: 0;
-  bottom: 60%;
+  bottom: 50%;
+  left: 0;
+  background: white;
+  border-bottom: 5px solid white;
+}
+.sow {
+  position: relative;  /*Parent MUST be relative*/
+  z-index: 3;
+  background: white;
+  border-top: 10px solid white;
+  border-bottom: 10px solid white;
+  /*Set width/height of the div in 'parent'*/
+  
+  height: 5px;
+}
+.sow:before {
+  content: "";
+  position: absolute; /*set 'child' to be absolute*/
+  z-index: -1;  /*Make this lower so text appears in front*/
+  /*You can choose to align it left, right, top or bottom here*/
+  top: 0;
+  right: 0;
+  bottom: 50%;
   left: 0;
   border:1px;
-  background: rgb(117, 212, 53);
+  background: #ffb0b0;
+  /* border-top: 10px solid white; */
+  border-bottom: 5px solid white;
+  
 }
 
 /* The hero image */

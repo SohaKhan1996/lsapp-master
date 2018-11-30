@@ -57,7 +57,7 @@
 
 						<div class="rowt">
 							<div class="cell" data-title="Full Name">
-								
+									<img id="sunImg" src="/images/icons/partial.png" align="right" alt="IMG-PRODUCT">
 							</div>
 							<div class="cell" data-title="Age">
 								31

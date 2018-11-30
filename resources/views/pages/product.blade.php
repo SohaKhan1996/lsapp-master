@@ -27,7 +27,7 @@
 							<input type="range" min="1" max="3" value="2" class="slider" id="myRange">
 							<div>
 								<span id="demo"></span>
-								<img id="sunImg" src="/images/icons/partial.png" align="right" alt="IMG-PRODUCT">
+								<img id="sunImg" src="/images/icons/partial.png" align="right" alt="IMG-PRODUCT" height="5px">
 								</div>
 							</div>
 						  
