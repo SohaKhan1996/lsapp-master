@@ -4,7 +4,7 @@
 @section('content')
    
 	<!-- Title Page -->
-	<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(images/heading-pages-05.jpg);">
+	<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(/images/heading-pages-05.jpg);">
 		<h2 class="l-text2 t-center">
 			Garden Planner
 		</h2>
@@ -46,7 +46,7 @@
                              <div class="col-md-1">
                                  <p>Height</p>
                              </div>
-                             <div class="col-md-2">
+                             <div class="col-md-4">
                                 <form>
                                     <select id="mySelect">
                                         <option value="2">2</option>
@@ -59,6 +59,9 @@
                                         <option value="9">9</option>
                                      </select>
                                 </form>
+                             </div>
+                             <div class="col-md-2">
+                                    <button type="button" class="btn btn-primary" onclick="window.location='{{ url("kitchen-garden/gardenplanner/vegetables") }}'" style="background:rgb(219,120,122); border:rgb(219,120,122)">Next</button>
                              </div>
                         </div>
                               <br>
