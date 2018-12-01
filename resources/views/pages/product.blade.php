@@ -19,7 +19,7 @@
 				<div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
 					<div class="leftbar p-r-20 p-r-0-sm">
 						<!--  -->
-						
+						@if($category == 'plants')
 						<div class="slidecontainer">
 								<h4 class="m-text14 p-b-32">
 										Sunlight Requirement
@@ -80,6 +80,7 @@
 								<input type="radio" checked="checked" name="radio">
 								<span class="checkmarkradio"></span>
 						</label>
+						@endif
 						<h4 class="m-text14 p-b-7">
 								Categories
 						</h4>

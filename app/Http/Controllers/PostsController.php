@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Post;
+use App\Category;
 use App\Product;
 use DB;
 
@@ -32,11 +33,28 @@ class PostsController extends Controller
         //$posts = DB::select('SELECT * FROM posts');
         //$posts = Post::orderBy('title','desc')->take(1)->get();
         //$posts = Post::orderBy('title','desc')->get();
+        // if(request()->category){
+        //     $products= Product::with('categories')->whereHas('categories', function($query){
+        //         $query->where('slug',request()->category);
+        //     })->get();
+        
+        // // $categories = Category::all();
+        // }
+        // else{
+        //     $products= Product::inRandomOrder()->take(12)->get();
+        //     // $categories= Category::all();
+        // }
+        // $products = Product::inRandomOrder()->take(5)->get();
 
+        $categories= Category::all();
         $posts = Post::orderBy('created_at','desc')->paginate(10);
         $products = Product::inRandomOrder()->take(5)->get();
-       
-        return view('posts.index')->with('posts', $posts)->with('products',$products);
+
+        return view('posts.index')->with([
+            'posts'=>$posts,            
+            'products'=>$products,
+            'categories'=>$categories,
+            ]);
     }
 
     /**

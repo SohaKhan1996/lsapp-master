@@ -278,10 +278,16 @@ body, html {
   border-bottom: 5px solid white;
   
 }
+#cropinfo {
+  float: left;
+  clear: both;
+  width: 750px;
+  margin-top: 20px;
+}
 
 .Img {
-  height: 75px;
-  width: 95px;
+  height: 90px;
+  width: 100px;
   /* width: 50%; */
   /* background-color: powderblue; */
 }

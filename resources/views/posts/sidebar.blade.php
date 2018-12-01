@@ -1,6 +1,8 @@
+
 <div class="col-md-4 col-lg-3 p-b-75">
 					<div class="rightbar">
 						<!-- Search -->
+						<br>
 						<div class="pos-relative bo11 of-hidden">
 							<input class="s-text7 size16 p-l-23 p-r-50" type="text" name="search-product" placeholder="Search">
 
@@ -10,42 +12,18 @@
 						</div>
 
 						<!-- Categories -->
-						<h4 class="m-text23 p-t-56 p-b-34">
-							Categories
+						<h4 class="m-text14 p-b-7">
+								Categories
 						</h4>
-
-						<ul>
-							<li class="p-t-6 p-b-8 bo6">
-								<a href="#" class="s-text13 p-t-5 p-b-5">
-									Fashion
+						<ul class="p-b-54">
+							@foreach($categories as $category)
+							<li class="p-t-4">
+							<a href="{{route('shop.index' , ['category'=>$category->slug])}}" class="s-text13 active1">
+									{{$category->name}}
 								</a>
 							</li>
-
-							<li class="p-t-6 p-b-8 bo7">
-								<a href="#" class="s-text13 p-t-5 p-b-5">
-									Beauty
-								</a>
-							</li>
-
-							<li class="p-t-6 p-b-8 bo7">
-								<a href="#" class="s-text13 p-t-5 p-b-5">
-									Street Style
-								</a>
-							</li>
-
-							<li class="p-t-6 p-b-8 bo7">
-								<a href="#" class="s-text13 p-t-5 p-b-5">
-									Life Style
-								</a>
-							</li>
-
-							<li class="p-t-6 p-b-8 bo7">
-								<a href="#" class="s-text13 p-t-5 p-b-5">
-									DIY & Crafts
-								</a>
-							</li>
+							@endforeach
 						</ul>
-
 						<!-- Featured Products -->
 						<h4 class="m-text23 p-t-65 p-b-34">
 							Featured Products

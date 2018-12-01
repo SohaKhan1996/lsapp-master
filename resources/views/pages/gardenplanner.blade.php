@@ -62,7 +62,7 @@
                                 </form>
                              </div>
                              <div class="col-md-2">
-                                    <button type="button" class="btn btn-primary" onclick="window.location='{{ url("kitchen-garden/gardenplanner/vegetables") }}'" style="background:rgb(219,120,122); border:rgb(219,120,122)">Next</button>
+                                <button type="button" class="btn btn-primary" onclick="window.location='{{ url("kitchen-garden/gardenplanner/vegetables") }}'" style="background:rgb(219,120,122); border:rgb(219,120,122)">Next</button>
                              </div>
                               <br>
                     <div class=" row">
@@ -75,11 +75,28 @@
         <p id="demo"></p>
         <br><hr>
         </div>
-    <div id="main" ></div>               
+    <div id="main" ></div>
+    <div id="cropinfo">
+            <h3>Planting Guide:</h3>
+            <table id="cropinfolist">
+                <tbody>
+                    <tr>
+                    <td id="3"><img src="https://www.gardeners.com/on/demandware.static/-/Library-Sites-SharedLibrary/default/v1543493313450/Articles/kgp/assets/beets_planted.png" alt="Beet, (9)">
+                    </td>
+                    <td><h3>Beet</h3>
+                        <ul>
+                            <li>Sow seeds 1/2″ deep directly in garden five to six weeks before last frost.</li>
+                            <li>Spacing: Plant seeds 18 per sq. ft., thin to nine plants </li>
+                             <li>Plant more in midsummer for a fall harvest</li>
+                             <li>Days to harvest: 45 to 60. Frost-hardy. </li>          
+                             <li>Hint: The longer you wait to harvest, the bigger the beets. Tops and thinnings are flavorful.</li> 	<li><a href="http://www.gardeners.com/buy/bulls-blood-beet-organic-seeds/8594068.html" style="color: #ff8f1c; margin: 0 0 0 0; text-decoration: underline;">Buy organic beet seeds</a></li> </ul> <a href="/gardening-encyclopedia?asset=7157" target="_new">Learn more about Beet in our Vegetable Encyclopedia</a></td></tr><tr><td id="4"><img src="https://www.gardeners.com/on/demandware.static/-/Library-Sites-SharedLibrary/default/v1543493313450/Articles/kgp/assets/broccoli_planted.png" alt="Broccoli, (1)"></td><td><h3>Broccoli</h3> <ul> 	<li>Sow seeds 1/4″ deep indoors, six weeks before last spring frost. </li> 	<li>Transplant into garden when seedlings have two sets of leaves.</li> 	<li>Spacing: one plant per sq. ft. </li> 	<li>Days to harvest: 50 to 70 days from transplant. Frost-hardy.</li> 	<li>Plant a second broccoli crop eight weeks before first fall frost.</li> 	<li>Hint: Row covers are an effective control for cabbage worms. </li> 	<li><a href="http://www.gardeners.com/buy/belstar-broccoli-organic-seeds/8594069.html" style="color: #ff8f1c; margin: 0 0 0 0;">Buy organic broccoli seeds</a></li> </ul> <a href="/gardening-encyclopedia?asset=7158" target="_new">Learn more about Broccoli in our Vegetable Encyclopedia</a></td></tr><tr><td id="32"><img src="https://www.gardeners.com/on/demandware.static/-/Library-Sites-SharedLibrary/default/v1543493313450/Articles/kgp/assets/arugula_planted.png" alt="Arugula, (16)"></td><td><h3>Arugula</h3> <ul>        <li>Sow seeds directly in garden, 1″ apart and 1/4″ deep, starting four weeks before last frost. </li>        <li>Spacing: Broadcast seed then thin to 16 per sq. ft.</li>        <li>Plant a new crop every two to three weeks until midsummer; sow again in late summer for fall harvest.</li>        <li>Days to harvest: 30 days to full-size leaves; small leaves are ready in 21 days. frost-hardy.</li>        <li>Hint: Fall crops are less bothered by flea beetles; cover spring crops with fabric to minimize damage</li>        </ul> <a href="/gardening-encyclopedia?asset=7186" target="_new">Learn more about Arugula in our Vegetable Encyclopedia</a></td></tr><tr><td id="5"><img src="https://www.gardeners.com/on/demandware.static/-/Library-Sites-SharedLibrary/default/v1543493313450/Articles/kgp/assets/brussels_sprouts_planted.png" alt="Brussels sprouts, (1)"></td><td><h3>Brussels sprouts</h3> <ul>        <li>Start seedlings 1/4″ deep indoors six weeks before last spring frost.</li>        <li>Transplant into garden soon after the last spring frost.</li>        <li>Spacing: one per sq. ft. Plant early season crops nearby to give Brussels sprouts more space later in season. </li>        <li>Very frost-hardy. Harvest after frost for best flavor.</li>        <li>Days to harvest: 90 to 110.</li>        <li>Hint: Cut off growing tip of plants a month before fall frost to get bigger sprouts.</li>        </ul> <a href="/gardening-encyclopedia?asset=7159" target="_new">Learn more about Brussels sprouts in our Vegetable Encyclopedia</a></td></tr></tbody></table>
+            </div>          
     </div>
+    
 </div>
+
         <script>
-           divgenerate(2,2);
+           divgenerate(7,5);
             function fw() {
                 $('#main div').remove();
                 x= document.getElementById("widthSelect").value;
@@ -93,7 +110,7 @@
                         bed=document.createElement("div")
                         bed.style.width = "90px";
                         bed.style.height = "90px";
-                        bed.style.border = "solid 1px";
+                        bed.style.border = "solid 0.5px";
                         bed.style.padding = "0%";
                         bed.style.margin = "0%";
                         bed.className="col-md-2";
@@ -102,7 +119,7 @@
                     bed=document.createElement("div")
                     bed.style.width = "90px";
                     bed.style.height = "90px";
-                    bed.style.border = "solid 1px";
+                    bed.style.border = "solid 0.5px";
                     bed.className="row";
                     document.getElementById('main').appendChild(bed);  
                     }
