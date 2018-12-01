@@ -1,54 +1,48 @@
 @extends('layouts.app')
 @section('content')
 
-<!--Left side bar-->
-{{-- <div class="col-lg-6"></div> --}}
-<hr>
-<div class="container" ">
-    <h2>Hire an Expert</h2>
-    <form>
-        <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="name" class="form-control" id="name" placeholder="Enter name">
-        </div>    
-        <div class="form-group">
-            <label for="Name">Email:</label>
-            <input type="email" class="form-control" id="email" placeholder="Enter email">
-        </div>  
-        <div class="form-group">
-            <label for="Contact">Contact:</label>
-            <input type="number" class="form-control" id="email"  placeholder="Enter in the format +92xxxxxxxxxx">
-        </div>  
+<div class="wrapper">
+<div class="home-hero">
+  <div class="feature">
+  <h3>Like this?</h3>
+    <p> Nothing like a serene sunset</p>
+  </div>
+  <div class="special">
+    <h3>Welcome home!</h3>
+    <p>Beautiful flowers to welcome you home</p>
 
-     <!--google map-->
-        <label for="googleMap">Please set your location</label>
-        <div id="googleMap" style="width:100%;height:400px;"></div>
-     
-    <!-- fields in which you need help-->
-        <label for="checkbox">What do you need assistance in?</label>
-        <div class="checkbox">
-            <label><input type="checkbox" value="">Landscaping </label>
-        </div>
-        <div class="checkbox">
-            <label><input type="checkbox" value="">Pest Controll and fertilizing</label>
-        </div>
-        <div class="checkbox">
-            <label><input type="checkbox" value="">Pruning hedges and shrubs</label>
-        </div>
-        <div class="checkbox">
-            <label><input type="checkbox" value="">General Maintenance </label>
-        </div>
-        <div class="checkbox">
-            <label><input type="checkbox" value="">Kitchen gardening</label>
-        </div>
-        <div class="checkbox">
-            <label><input type="checkbox" value="">Installation</label>
-        </div>
+  </div>
+  <div class="amazing">
+    <!--<h3>10 things you discover when taking a balloon ride.</h3>
+    <p>Number 8 will AMAZE you.</p>-->
+  </div>
+  <div class="news">
+    <h3>Angry people at balloon fiestas</h3>
+    <p>Hot air balloons. A bit weather sensitive. </p>
+
+    <a class="spam-button" href="/spam-machine"> Hire now</a></div>
+ </div>
+ <!--
+  <div class="photos"><h3>Balloon photos</h3>
+    <p>I have quite a few.</p></div>
+  <div class="cta"><p>Sign up for more information about balloons. </p>
+    <a class="spam-button" href="/spam-machine">Sign me up!</a></div>-->
   
+ 
+
+</div>
+</div>
+
+
+
+     
+        
+       
+
         <br>
         <input type="submit" class="btn btn-info active" value="Submit Button">
-    </form>
-</div>
+   
+
 
 <br>
 
