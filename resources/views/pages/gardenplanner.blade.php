@@ -20,6 +20,7 @@
                      
                           
 				<div class="col-md-8 col-lg-9 p-b-75" >
+                    <h3>Design your Row or Bed</h3>
                         <br>
                         <div style="align: right;" >
                            <h4> 1. Select your size</h4>
@@ -30,7 +31,7 @@
                             
                             <div class="col-md-2">
                                 <form>
-                                    <select id="mySelect">
+                                    <select id="widthSelect" onchange="fw()">
                                         <option value="2">2</option>
                                         <option value="3">3</option>
                                         <option value="4">4</option>
@@ -44,11 +45,11 @@
                                </div>
                             
                              <div class="col-md-1">
-                                 <p>Height</p>
+                                 <p>Length</p>
                              </div>
                              <div class="col-md-4">
                                 <form>
-                                    <select id="mySelect">
+                                    <select id="lengthSelect" onchange="fw()">
                                         <option value="2">2</option>
                                         <option value="3">3</option>
                                         <option value="4">4</option>
@@ -63,9 +64,7 @@
                              <div class="col-md-2">
                                     <button type="button" class="btn btn-primary" onclick="window.location='{{ url("kitchen-garden/gardenplanner/vegetables") }}'" style="background:rgb(219,120,122); border:rgb(219,120,122)">Next</button>
                              </div>
-                        </div>
                               <br>
-				
                     <div class=" row">
                             {{-- <div class="col-md-8"> --}}
                     <h4>   2. Drag and drop item onto bed</h4>
@@ -73,28 +72,42 @@
                             {{-- </div> --}}
                     </div>
                 </div>
-            {{-- <script>
-                var my = document.getElementById("mySelect");
-                 my.oninput = function () {
-                var x= document.getElementById("mySelect").value;
-                
+        <p id="demo"></p>
+        <br><hr>
+        </div>
+    <div id="main" ></div>               
+    </div>
+</div>
+        <script>
+           divgenerate(2,2);
+            function fw() {
+                $('#main div').remove();
+                x= document.getElementById("widthSelect").value;
+                y= document.getElementById("lengthSelect").value;
+                divgenerate(x,y)
+            }
+            function divgenerate(x,y){
+                var i,j,bed;
+                for(j=0;j<y;j++){  //length    
+                    for(i=0;i<x-1;i++){  //width
+                        bed=document.createElement("div")
+                        bed.style.width = "90px";
+                        bed.style.height = "90px";
+                        bed.style.border = "solid 1px";
+                        bed.style.padding = "0%";
+                        bed.style.margin = "0%";
+                        bed.className="col-md-2";
+                        document.getElementById('main').appendChild(bed);                 
+                 }
+                    bed=document.createElement("div")
+                    bed.style.width = "90px";
+                    bed.style.height = "90px";
+                    bed.style.border = "solid 1px";
+                    bed.className="row";
+                    document.getElementById('main').appendChild(bed);  
+                    }
+                }
             </script>
-        <p id="demo"></p> --}}
-       
-        <br>
-        <hr>
-        <div class=" row">
-                {{-- <div class="col-md-8"> --}}
-                <div class="chessboard ">
-                        @for ($i = 0; $i < 54; $i++)
-                            <div class="white"></div>
-                        @endfor
-                    </div>
-                 
-                </div>
-            </div>
-			{{-- </div> --}}
-		</div>
 	</section>
 
 	@endsection

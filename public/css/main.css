@@ -437,9 +437,10 @@ background: white;
 
 /* board */
 .chessboard {
-  width: 740px;
-  /* height: 740px; */
-  /* margin: 20px; */
+  /* width:auto;
+  height:auto;
+  margin: 0px;
+  padding-left:0px; */
   border: 8px solid rgba(219, 120, 122, 0.815);
 }
 .white {
@@ -1508,7 +1509,7 @@ li.sale-noti > a {
 
 .side-menu .sub-menu > li {
   padding-left: 12px;
-  padding-top: 
+  /* padding-top: 5px; */
 }
 
 .side-menu .sub-menu a:hover {
