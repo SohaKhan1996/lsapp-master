@@ -191,7 +191,7 @@ body, html {
 .myDiv {
   position: relative;  /*Parent MUST be relative*/
   z-index: 3;
-  background: #FE6666;
+  background: rgb(160, 197, 63);
   
   /*Set width/height of the div in 'parent'*/
   border-top: 10px solid white;
@@ -234,7 +234,7 @@ body, html {
 .harvest {
   position: relative;  /*Parent MUST be relative*/
   z-index: 3;
-  background: #FE6666;
+  background: rgb(160, 197, 63);
   border-top: 10px solid white;
   border-bottom: 10px solid white;
   /*Set width/height of the div in 'parent'*/
@@ -277,6 +277,13 @@ body, html {
   /* border-top: 10px solid white; */
   border-bottom: 5px solid white;
   
+}
+
+.Img {
+  height: 75px;
+  width: 95px;
+  /* width: 50%; */
+  /* background-color: powderblue; */
 }
 
 /* The hero image */
@@ -431,9 +438,9 @@ background: white;
 /* board */
 .chessboard {
   width: 740px;
-  height: 740px;
+  /* height: 740px; */
   /* margin: 20px; */
-  border: 0.1px rgb(219,120,122);
+  border: 8px solid rgba(219, 120, 122, 0.815);
 }
 .white {
   float: left;
@@ -441,7 +448,7 @@ background: white;
   height: 80px;
   background-color: #fff;
     font-size:50px;
-    border: 0.1px solid rgb(219,120,122);
+    border: 0.1px solid rgba(219, 120, 122, 0.425);
   text-align:center;
   display: table-cell;
   vertical-align:middle;
