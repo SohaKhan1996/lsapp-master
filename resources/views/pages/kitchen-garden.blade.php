@@ -8,7 +8,7 @@
     
     <h2>"   Fresh & Healthy Vegetables  "</h2>
     <div class="shadow-lg p-4 mb-4">
-   <button class="btn btn-primary" type="button" onclick="window.location='{{ url("kitchen-garden/get-started") }}'">Get started</button>
+   <button class="btn btn-primary" type="button" onclick="window.location='{{ url("kitchen-garden/gardenplanner") }}'">Get started</button>
    <!--<a href="{ url('/kitchen-garden/'. '/get-started') }" class="btn btn-xs btn-info pull-centers">Get started</a>-->
     </div>
   </div>
