@@ -49,6 +49,11 @@ class PagesController extends Controller
         $title= 'Kitchen Gardening';
         return view('pages.kitchen-garden')->with('title',$title);
     }
+
+    public function vegetables(){
+        $title= 'vegetables';
+        return view('pages.vegetables')->with('title',$title);
+    }
     // public function getstarted() {
     //     $title= 'Get started with kitchen gardening';
     //    // $problem = \App\kitchen-garden::find($problem_id); //If you have your model 'Problem' located in your App folder
