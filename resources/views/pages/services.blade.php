@@ -2,6 +2,7 @@
 @section('content')
 
 <div class="wrapper">
+
 <div class="home-hero">
   <div class="feature">
   <h3>Like this?</h3>
@@ -17,10 +18,12 @@
     <p>Number 8 will AMAZE you.</p>-->
   </div>
   <div class="news">
-    <h3>Angry people at balloon fiestas</h3>
-    <p>Hot air balloons. A bit weather sensitive. </p>
+    <h3> Like what you see? </h3>
 
-    <a class="spam-button" href="/spam-machine"> Hire now</a></div>
+    <br>
+    <br>
+
+    <a class="spam-button" href="/spam-machine" onclick="window.location='{{ url("services/profiles/gardener") }}'" > Hire now</a></div>
  </div>
  <!--
   <div class="photos"><h3>Balloon photos</h3>
@@ -31,19 +34,38 @@
  
 
 </div>
+<div class="form-group">
+  <label for="sel1">Select list the area where you live</label>
+  <select class="form-control" id="sel1" style="height:30px; width:30%; border:#f75827d2 " align="middle">
+    <option>Clifton</option>
+    <option>DHA</option>
+    <option >Federal B</option>
+    <option>Gulshan</option>
+    <option>Johar</option>
+    <option>KDA</option>
+    <option >Nazimabad</option>
+    <option>North Nazimabad</option>
+  </select>
 </div>
-
-
-
-     
-        
-       
-
+</div>
+<br>
+<h4>Why do you want to hire a gardener?</h4>
+<div class="radio">
+  <label><input type="radio" name="optradio" checked>Maintenance</label>
+</div>
+<div class="radio">
+  <label><input type="radio" name="optradio">Landscaping</label>
+</div>
         <br>
-        <input type="submit" class="btn btn-info active" value="Submit Button">
+        <button type="button" class="btn btn-primary" onclick="window.location='{{ url("services/profiles") }}'" style="background:rgb(219,120,122); width:100px">Submit</button>
+
+
    
 
 
 <br>
+
+
+
 
 @endsection

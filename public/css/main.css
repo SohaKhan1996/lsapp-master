@@ -2785,8 +2785,10 @@ h3+p {
 }
 
 .news {
-  background-image: url('/images/landscape/house1.jpg'); 
+  background-image: url('/images/pb-images/concrete.jpg'); 
   color: #fff;
+  background-size: cover;
+  position: center;
 }
 
 .special {
@@ -2808,7 +2810,12 @@ h3+p {
   flex-direction: column;
 }
 .news{
-  background-image: url('/images/landscape/groud.jpg')
+  background-image: url('/images/pb-images/staircase.jpg');
+  position: center;
+
+
+
+
 }
 
 .cta {
@@ -2822,8 +2829,8 @@ a.spam-button:link {
   border: 1px solid #ccc;
   border-radius: 3px;
   text-decoration: none;
-  background-color: #fff;
-  color: #333;
+  background-color: #f75827d2;
+  color:#ccc;
   display: block;
   padding: 5px;
   margin: auto auto 20px;
@@ -2884,6 +2891,48 @@ a.spam-button:link {
   }
 }
 
+/*[ Profile cards on profile view ]
+///////////////////////////////////////////////////////////
+*/
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+
+
+
 
 
 /*[ Input NumProduct ]
@@ -2900,6 +2949,8 @@ input.num-product::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0; 
 }
+
+
 
 
 /* jeweler */

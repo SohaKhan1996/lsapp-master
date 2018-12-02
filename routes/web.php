@@ -64,6 +64,8 @@ Route::get('/services', 'PagesController@services');
 Route::get('/kitchen-garden', 'PagesController@kitchenGarden');
 Route::get('/kitchen-garden/gardenplanner','PagesController@gardenplanner');
 Route::get('/kitchen-garden/gardenplanner/vegetables', 'PagesController@vegetables');
+Route::get('/services/profiles', 'PagesController@profiles');
+Route::get('/services/profiles/gardener', 'PagesController@gardener');
 //Route::get('/kitchen-garden/get-started/fruits','PagesController@fruits');
 //Route::get('/gardenplanner','PagesController@gardenplanner');
 Route::resource('posts', 'PostsController');
