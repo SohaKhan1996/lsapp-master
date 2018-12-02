@@ -60,10 +60,10 @@ class PagesController extends Controller
         
     //     return view('pages.gardenplanner') ->with('title',$title);
     //     }
-    public function vegetables(){
-        $title ='Growing your own fruits and vegetables at home';
-        return view('pages.vegetables')->with('title',$title);
-    }  
+    // public function vegetables(){
+    //     $title ='Growing your own fruits and vegetables at home';
+    //     return view('pages.vegetables')->with('title',$title);
+    // }  
     // public function fruits(){
     //     $title ='Growing your own fruits at home';
     //     return view('pages.fruits')->with('title',$title);
