@@ -91,7 +91,7 @@
 									
 							</div>
 							<div class="cell" data-title="Full Name">
-								<img class="Img" src="/images/icons/partial.png" align="right" alt="IMG-PRODUCT">
+								<img class="sunImg" src="/images/icons/partial.png" align="right" alt="IMG-PRODUCT">
 								</div>
 								<div class="cell" data-title="Age">
 									31

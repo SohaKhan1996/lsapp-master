@@ -15,7 +15,7 @@ class ShopController extends Controller
     public function index()
     {
         $title="Products";
-
+        $category=request()->category;
         if(request()->category){
             $products= Product::with('categories')->whereHas('categories', function($query){
                 $query->where('slug',request()->category);
@@ -35,6 +35,7 @@ class ShopController extends Controller
             'title' => $title,
             'products'=>$products,
             'categories'=>$categories,
+            'category'=>$category,
             ]);
     }
 

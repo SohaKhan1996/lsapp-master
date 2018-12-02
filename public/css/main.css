@@ -278,10 +278,16 @@ body, html {
   border-bottom: 5px solid white;
   
 }
+#cropinfo {
+  float: left;
+  clear: both;
+  width: 750px;
+  margin-top: 20px;
+}
 
 .Img {
-  height: 75px;
-  width: 95px;
+  height: 90px;
+  width: 100px;
   /* width: 50%; */
   /* background-color: powderblue; */
 }
@@ -437,9 +443,10 @@ background: white;
 
 /* board */
 .chessboard {
-  width: 740px;
-  /* height: 740px; */
-  /* margin: 20px; */
+  /* width:auto;
+  height:auto;
+  margin: 0px;
+  padding-left:0px; */
   border: 8px solid rgba(219, 120, 122, 0.815);
 }
 .white {
@@ -1508,7 +1515,7 @@ li.sale-noti > a {
 
 .side-menu .sub-menu > li {
   padding-left: 12px;
-  padding-top:15px;
+  /* padding-top: 5px; */
 }
 
 .side-menu .sub-menu a:hover {
@@ -2892,9 +2899,6 @@ input.num-product::-webkit-outer-spin-button,
 input.num-product::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0; 
-<<<<<<< HEAD
-}
-=======
 }
 
 
@@ -3180,4 +3184,3 @@ textarea {
         page-break-after: avoid;
     }
 }
->>>>>>> soha

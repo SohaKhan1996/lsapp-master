@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Product;
-use App\Categories;
+use App\Category;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -60,10 +60,10 @@ class PagesController extends Controller
         
     //     return view('pages.gardenplanner') ->with('title',$title);
     //     }
-    // public function vegetables(){
-    //     $title ='Growing your own fruits and vegetables at home';
-    //     return view('pages.vegetables')->with('title',$title);
-    // }  
+    public function vegetables(){
+        $title ='Growing your own fruits and vegetables at home';
+        return view('pages.vegetables')->with('title',$title);
+    }  
     // public function fruits(){
     //     $title ='Growing your own fruits at home';
     //     return view('pages.fruits')->with('title',$title);
@@ -72,7 +72,12 @@ class PagesController extends Controller
        
         $title="Home";
         $products = Product::inRandomOrder()->take(7)->get();
-        return view('pages.gardenplanner')->with('title',$title)->with('products',$products);
+        $categories= Category::all();
+        return view('pages.gardenplanner')->with([
+            'title'=>$title,            
+            'products'=>$products,
+            'categories'=>$categories,
+            ]);
     }
 
 }
