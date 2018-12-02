@@ -19,7 +19,7 @@
 				<div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
 					<div class="leftbar p-r-20 p-r-0-sm">
 						<!--  -->
-						@if($category == 'plants')
+						@if($category == 'plants' || $category == '')
 						<div class="slidecontainer">
 								<h4 class="m-text14 p-b-32">
 										Sunlight Requirement
@@ -27,14 +27,14 @@
 							<input type="range" min="1" max="3" value="2" class="slider" id="myRange">
 							<div>
 								<span id="demo"></span>
-								<img id="sunImg" src="/images/icons/partial.png" align="right" alt="IMG-PRODUCT" height="5px">
+								<img id="sunImage" src="/images/icons/partial.png" align="right" alt="IMG-PRODUCT" >
 								</div>
 							</div>
 						  
 						  <script>
 						  var slider = document.getElementById("myRange");
 						  var output = document.getElementById("demo");
-						  var sun = document.getElementById("sunImg");
+						  var sun = document.getElementById("sunImage");
 						  output.innerHTML = "Partial Light";
 						  
 						  slider.oninput = function() {
