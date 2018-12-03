@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="wrapper">
+
+<div class="wrapper container">
 
 <div class="home-hero">
   <div class="feature">
@@ -33,8 +34,9 @@
   
  
 
-</div>
-<div class="form-group">
+
+
+<div class="form-group c">
   <label for="sel1">Select list the area where you live</label>
   <select class="form-control" id="sel1" style="height:30px; width:30%; border:#f75827d2 " align="middle">
     <option>Clifton</option>
@@ -47,10 +49,9 @@
     <option>North Nazimabad</option>
   </select>
 </div>
-</div>
-<br>
+
 <h4>Why do you want to hire a gardener?</h4>
-<div class="radio">
+<div class="radio ">
   <label><input type="radio" name="optradio" checked>Maintenance</label>
 </div>
 <div class="radio">
@@ -59,9 +60,9 @@
         <br>
         <button type="button" class="btn btn-primary" onclick="window.location='{{ url("services/profiles") }}'" style="background:rgb(219,120,122); width:100px">Submit</button>
 
-
-   
-
+</div>
+</div>
+</div>
 
 <br>
 
