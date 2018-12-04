@@ -88,13 +88,14 @@
 								Carrot 
 							</div>
 							<div class="cell" data-title="Job Title">
+								<img class="Img" src="/images/icons/climber.png" align="right" alt="IMG-PRODUCT">
 									
 							</div>
 							<div class="cell" data-title="Full Name">
 								<img class="sunImg" src="/images/icons/partial.png" align="right" alt="IMG-PRODUCT">
 								</div>
 								<div class="cell" data-title="Age">
-									31
+									<img  src="/images/icons/minwater.png" align="right" alt="IMG-PRODUCT" >
 								</div>
 								<div class="cell" data-title="Age">
 										31

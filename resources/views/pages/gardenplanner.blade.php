@@ -14,7 +14,7 @@
 	<section class="bgwhite p-t-0">
         
 		<div class="container">
-            
+            <div>
 			<div class="row">
                     @include('posts.sidebar')
                      
@@ -96,32 +96,100 @@
 </div>
 
         <script>
-           divgenerate(7,5);
+            function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+ }
+
+
+             function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+  var copyimg = document.createElement("img");
+  copyimg.className="Img";
+  copyimg.draggable="true";
+  copyimg.ondragstart="drag(event)";
+    var original = document.getElementById(data);
+    copyimg.src = original.src;
+    // document.getElementById("veg1").appendChild(copyimg);
+    var ul = document.getElementById("Crops");
+    var lit = document.createElement("li");
+   
+    lit.appendChild(copyimg);
+    $('ul li:empty').replaceWith(lit );
+    // li.setAttribute("id", "element4"); // added line
+    // ul.appendChild(lit);
+//   var nodeCopy = document.getElementById(data).cloneNode(true);
+//   nodeCopy.id = "newId"; /* We cannot use the same ID */
+//   ev.currentTarget.appendChild(nodeCopy);
+}
+
+           divgenerate(2,2);
             function fw() {
                 $('#main div').remove();
                 x= document.getElementById("widthSelect").value;
                 y= document.getElementById("lengthSelect").value;
                 divgenerate(x,y)
             }
+            // var drop = document.createAttribute("ondrop"); 
+            // drop.value = "drop(event)";
+            // var dragover = document.createAttribute("allowDrop(event)"); 
+            // dragover.value = "drop(event";  
             function divgenerate(x,y){
                 var i,j,bed;
                 for(j=0;j<y;j++){  //length    
                     for(i=0;i<x-1;i++){  //width
                         bed=document.createElement("div")
+                        bed.setAttribute("id", "Div1");
                         bed.style.width = "90px";
                         bed.style.height = "90px";
                         bed.style.border = "solid 0.5px";
                         bed.style.padding = "0%";
                         bed.style.margin = "0%";
                         bed.className="col-md-2";
+                        var drop = document.createAttribute("ondrop"); 
+                        drop.value = "drop(event)";
+                        var dragover = document.createAttribute("ondragover"); 
+                        dragover.value = "allowDrop(event)";  
+                        bed.setAttributeNode(drop);
+                        bed.setAttributeNode(dragover);
                         document.getElementById('main').appendChild(bed);                 
                  }
-                    bed=document.createElement("div")
-                    bed.style.width = "90px";
-                    bed.style.height = "90px";
-                    bed.style.border = "solid 0.5px";
-                    bed.className="row";
-                    document.getElementById('main').appendChild(bed);  
+                            bed=document.createElement("div")
+                            bed.setAttribute("id", "Div2");
+                            bed.style.padding = "0%";
+                            bed.style.margin = "0%";
+                            bed.style.width = "90px";
+                            bed.style.height = "90px";
+                            bed.style.border = "solid 0.1px";
+                            bed.className="row";
+                            var drop = document.createAttribute("ondrop"); 
+                            drop.value = "drop(event)";
+                            var dragover = document.createAttribute("ondragover"); 
+                            dragover.value = "allowDrop(event)";  
+                            bed.setAttributeNode(drop);
+                            bed.setAttributeNode(dragover);
+                            document.getElementById('main').appendChild(bed);  
                     }
                 }
             </script>

@@ -1,50 +1,42 @@
+<style>
+    ul.images {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      width: 900px;
+      overflow-x: auto;
+    }
 
-<link  href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css'><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css'>
-<style>/* slick */
-        .slickdiv{
-          background:#fff;
-        }
-        .mainslick {
-          font-family:Montserrat-Regular;
-          width:1500px;
-          display:block;
-          margin:0 auto;
-          background:#fff;
-        }
-       
-        .slickh3 {
-            background: #fff;
-            color: #3498db;
-            font-size: 36px;
-            line-height: 100px;
-            margin: 10px;
-            padding: 2%;
-            position: relative;
-            text-align: center;
-        }
-        .actionslick{
-          display:block;
-          margin:100px auto;
-          width:100%;
-          text-align:center;
-        }
-        .actionslick a {
-          display:inline-block;
-          padding:5px 10px; 
-          /* background:#f30; */
-          color:#fff;
-          text-decoration:none;
-        }
-        .actionslick a:hover{
-          background:#000;
-        }
-        </style>
-        <div class=slickdiv>
-        <div class="mainslick">
-        
-          <div class="slider slider-nav">
-                <div><img class="slickh3 Img" src="/images/seed/arun.jpg"></div>
-                <div><img class="slickh3 Img" src="/images/seed/brinjal.jpg"></div>
+    .scrollList{
+      background: "white";
+    }
+    
+    ul.images li {
+      flex: 0 0 auto;
+      width: 150px;
+      height: 150px;
+    }
+</style>
+<ul class="images" id="Crops">
+        <!-- Inline styles added for demonstration purposes only. -->
+        <li id="veg1"><img class="Img" id="img1" src="/images/seed/arun.jpg" draggable="true" ondragstart="drag(event)" ></li>
+        <li id="veg2"><img class="Img" id="img2" src="/images/seed/brinjal.jpg" draggable="true" ondragstart="drag(event)" ></li>
+        <li id="veg3"><img class="Img" id="img3" src="/images/seed/brocoli.jpg" draggable="true" ondragstart="drag(event)" ></li>
+        <li id="veg4"><img class="Img" id="img4" src="/images/seed/carrot.png" draggable="true" ondragstart="drag(event)" ></li>
+        <li><img class="Img" id="img5" src="/images/seed/celery.jpg" draggable="true" ondragstart="drag(event)" ></li>
+        <li><img class="Img" id="img6" src="/images/seed/coriander.jpg" draggable="true" ondragstart="drag(event) "></li>
+        <li><img class="Img" id="img7" src="/images/seed/cucumber.jpg" draggable="true" ondragstart="drag(event)"></li>
+        <li><img class="Img" id="img8" src="/images/seed/fenugreek.jpg" draggable="true" ondragstart="drag(event)"></li>
+        <li><img class="Img" id="img9" src="/images/seed/garlic.jpg" draggable="true" ondragstart="drag(event)"></li>
+        <li><img class="Img" id="img10" src="/images/seed/lettuce.jpg" draggable="true" ondragstart="drag(event)"></li>
+     
+      </ul>
+    
+{{--     
+         <div><img class="slickh3 Img" id="img1" src="/images/seed/arun.jpg" draggable="true" ondragstart="drag(event)">
+                </div>
+                <div><img class="slickh3 Img" id="img2" src="/images/seed/brinjal.jpg" draggable="true" ondragstart="drag(event)"></div>
                 <div><img class="slickh3 Img" src="/images/seed/brocoli.jpg"></div>
                 <div><img class="slickh3 Img" src="/images/seed/carrot.png"></div>
                 <div><img class="slickh3 Img" src="/images/seed/celery.jpg"></div>             
@@ -66,34 +58,22 @@
                 <div><img class="slickh3 Img" src="/images/seed/tomato.jpg"></div>        
                 <div><img class="slickh3 Img" src="/images/seed/turmeric.jpg"></div>  
                 <div><img class="slickh3 Img" src="/images/seed/turnip.jpg"></div>
-            
-              
-          </div>
-        </div>
-         
-        </div>
-        
-        <script src='//static.codepen.io/assets/common/stopExecutionOnTimeout-41c52890748cd7143004e05d3c5f786c66b19939c4500ce446314d1748483e13.js'></script><script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js'></script>
-        <script >$('.slider-for').slick({
-          slidesToShow: 8,
-          slidesToScroll: 3,
-          arrows: true,
-          fade: true,
-          asNavFor: '.slider-nav' });
-        
-        $('.slider-nav').slick({
-          slidesToShow: 8,
-          slidesToScroll: 3,
-          asNavFor: '.slider-for',
-          dots: false,
-          focusOnSelect: true });
-        
-        
-        $('a[data-slide]').click(function (e) {
-          e.preventDefault();
-          var slideno = $(this).data('slide');
-          $('.slider-nav').slick('slickGoTo', slideno - 1);
-        });
-        //# sourceURL=pen.js
-        </script>
-       
+             --}}
+ 
+ <script> function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+ }
+
+
+</script>
