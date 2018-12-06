@@ -1583,7 +1583,7 @@ li.sale-noti > a {
 
 .logo2 img {
   max-height: 120px;
-  width:290px
+  width:250px
 }
 
 .fixed-header2 {
@@ -2897,7 +2897,7 @@ a.spam-button:link {
 ///////////////////////////////////////////////////////////
 */
 
-.card {
+/* .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
   margin: auto;
@@ -2935,7 +2935,7 @@ button:hover, a:hover {
 
 
 
-
+ */
 
 /*[ Input NumProduct ]
 ///////////////////////////////////////////////////////////
