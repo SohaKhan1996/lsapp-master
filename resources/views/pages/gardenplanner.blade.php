@@ -26,7 +26,7 @@
                            <h4> 1. Select your size</h4>
                         <div class=" row">
                             <div class="col-md-1">
-                                    <p>Width</p>
+                                    <p>Width: (sq.ft)</p>
                             </div>
                             
                             <div class="col-md-2">
@@ -45,7 +45,7 @@
                                </div>
                             
                              <div class="col-md-1">
-                                 <p>Length</p>
+                                 <p>Length: (sq.ft)</p>
                              </div>
                              <div class="col-md-4">
                                 <form>
@@ -126,7 +126,7 @@ function drop(ev) {
   var data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
   var copyimg = document.createElement("img");
-  copyimg.className="Img";
+//   copyimg.className="Img";
   copyimg.draggable="true";
   copyimg.ondragstart="drag(event)";
     var original = document.getElementById(data);
@@ -161,8 +161,8 @@ function drop(ev) {
                     for(i=0;i<x-1;i++){  //width
                         bed=document.createElement("div")
                         bed.setAttribute("id", "Div1");
-                        bed.style.width = "90px";
-                        bed.style.height = "90px";
+                        bed.style.width = "80px";
+                        bed.style.height = "80px";
                         bed.style.border = "solid 0.5px";
                         bed.style.padding = "0%";
                         bed.style.margin = "0%";
@@ -179,9 +179,9 @@ function drop(ev) {
                             bed.setAttribute("id", "Div2");
                             bed.style.padding = "0%";
                             bed.style.margin = "0%";
-                            bed.style.width = "90px";
-                            bed.style.height = "90px";
-                            bed.style.border = "solid 0.1px";
+                            bed.style.width = "80px";
+                            bed.style.height = "80px";
+                            bed.style.border = "solid 0.5px";
                             bed.className="row";
                             var drop = document.createAttribute("ondrop"); 
                             drop.value = "drop(event)";
