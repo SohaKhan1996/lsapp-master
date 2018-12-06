@@ -135,9 +135,9 @@
 				</div>
 			</div>
 			@include('layouts.nav')
-				<div class="header-icons">
+				{{-- <div class="header-icons">
 
-				</div>
+				</div> --}}
 			</div>
 		</div>
 

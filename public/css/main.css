@@ -1102,12 +1102,13 @@ li.sale-noti > a {
 }
 
 .sub_menu {
+  
   list-style-type: none;
   position: absolute;
   z-index: 1100;
-  top:0;
-  left:100%;
-  width: 225px;
+  /* top:0;
+  left:100%; */
+  /* width: 225px; */
   background-color: #222222;
   opacity: 0;
   visibility: hidden;
@@ -1121,7 +1122,7 @@ li.sale-noti > a {
 
 .main_menu > li > .sub_menu {
   top:100%;
-  left: 0;
+  /* left: 0; */
   position: absolute;
 }
 
