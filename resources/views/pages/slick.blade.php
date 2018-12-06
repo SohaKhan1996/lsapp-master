@@ -8,14 +8,11 @@
       overflow-x: auto;
     }
 
-    .scrollList{
-      background: "white";
-    }
     
     ul.images li {
       flex: 0 0 auto;
       width: 150px;
-      height: 150px;
+      height: 110px;
     }
 </style>
 <ul class="images" id="Crops">

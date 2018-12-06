@@ -1,7 +1,7 @@
 <!-- Header -->
 <header class="header2">
 		<!-- Header desktop -->		
-		<div class="container-menu-header-v2 p-t-26" style="background-color: white;">				
+		<div class="container-menu-header-v2 p-t-7" style="background-color: white;">				
 			<div class="topbar2">
 				<div class="topbar-social">
 					<a href="#" class="topbar-social-item fa fa-facebook"></a>
