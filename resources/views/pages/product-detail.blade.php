@@ -7,18 +7,14 @@
 			<i class="fa fa-angle-right m-l-8 m-r-9" aria-hidden="true"></i>
 		</a>
 
-		<a href="/product" class="s-text16">
+		{{-- <a href="/product" class="s-text16">
 			Women
 			<i class="fa fa-angle-right m-l-8 m-r-9" aria-hidden="true"></i>
-		</a>
+		</a> --}}
 
-		<a href="#" class="s-text16">
-			T-Shirt
-			<i class="fa fa-angle-right m-l-8 m-r-9" aria-hidden="true"></i>
-		</a>
 
 		<span class="s-text17">
-			Boxy T-Shirt with Roll Sleeve Detail
+			{{$product->name}}
 		</span>
 	</div>
 

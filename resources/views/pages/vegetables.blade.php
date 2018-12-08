@@ -97,7 +97,7 @@
 								<div class="cell" data-title="Age">
 									<img class="water"  src="/images/icons/little.png" align="right" alt="IMG-PRODUCT" >
 								</div>
-								<div class="cell" data-title="Age">
+								<div class="cell" data-title="Age" style="align:center">
 										18
 								</div>
 								<div class="cell" data-title="Age">

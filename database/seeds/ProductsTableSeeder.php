@@ -71,7 +71,7 @@ class ProductsTableSeeder extends Seeder
             Approx. Weight: 3 lbs., 14 oz.',
             'price' => 550,
             'description' =>'This border fork with its smaller head size is simply a joy to use. While a larger size tool might get the job done quicker, you will enjoy the job more and be less tired afterwards with this border fork. Great for digging, aeration, and soil amending in those smaller areas such as beds and raised beds...loved by ladies and gents alike'
-        ])->categories()->attach(4);
+        ])->categories()->attach(6);
 
         Product::create([
             'name' => 'Ferm Hexagon Pot XL | Blue',
@@ -85,7 +85,20 @@ class ProductsTableSeeder extends Seeder
             Approx. Weight: 3 lbs., 14 oz.',
             'price' => 550,
             'description' =>'The Hexagon Pot from Ferm Living is made from powder coated metal with a matte polish. These beautiful planters are the perfect accent piece to beautify a table top, desk or shelf.'
-        ])->categories()->attach(6);
+        ])->categories()->attach(2);
+        Product::create([
+            'name' => 'Plant Bot',
+            'slug' => 'plant-bot',
+            'details' => 'Size-
+
+            Length: 44 inches
+            
+            Blade: 6” wide X 7.5” long
+            
+            Approx. Weight: 3 lbs., 14 oz.',
+            'price' => 550,
+            'description' =>'The Hexagon Pot from Ferm Living is made from powder coated metal with a matte polish. These beautiful planters are the perfect accent piece to beautify a table top, desk or shelf.'
+        ])->categories()->attach(3);
 
 
 
