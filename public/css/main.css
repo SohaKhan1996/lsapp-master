@@ -123,7 +123,7 @@ body, html {
 }
 
 .wrap-table100 {
-  width: 1400px;
+  width: 1500px;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -172,7 +172,7 @@ body, html {
     font-family: Poppins-Bold;
     font-size: 18px;
     color: #808080;
-    line-height: 1.2;
+    line-height: 3.2;
     text-transform: uppercase;
     font-weight: unset !important;
     margin-right: 13px;
@@ -186,6 +186,12 @@ body, html {
 .cell {
   display: table-cell;
   margin-right: 13px;
+  margin-left:15px;
+  padding-left: 20px;
+  font-size: 20px;
+  top: 0px;
+  position: relative;
+  box-align: center;
 }
 
 .myDiv {
@@ -196,7 +202,7 @@ body, html {
   /*Set width/height of the div in 'parent'*/
   border-top: 10px solid white;
   border-bottom: 10px solid white;
-  height: 5px;
+  height: 15px;
 }
 .myDiv:before {
   content: "";
@@ -240,7 +246,7 @@ body, html {
   border-bottom: 10px solid white;
   /*Set width/height of the div in 'parent'*/
   
-  height: 5px;
+  height: 15px;
 }
 .harvest:before {
   content: "";
@@ -1575,6 +1581,10 @@ li.sale-noti > a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.water{
+  height:60px;
+  width:60px;
 }
 
 /* ------------------------------------ */
