@@ -73,7 +73,7 @@
                     </div>
                 </div>
         <p id="demo"></p>
-        <br><hr>
+        <hr>
         </div>
     <div id="main" ></div>
     <div id="cropinfo">
